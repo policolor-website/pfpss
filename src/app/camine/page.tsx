@@ -17,7 +17,8 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/site/header";
 import { SiteFooter } from "@/components/site/footer";
-import camineData from "@/data/camine-director.json";
+import camineRaw from "@/data/camine-director.json";
+const camineData = camineRaw as Camin[];
 
 type Camin = {
   slug: string;
@@ -25,11 +26,11 @@ type Camin = {
   phone: string;
   website: string;
   address: string;
-  lat: string;
-  lng: string;
+  lat: string | number;
+  lng: string | number;
   judet: string;
-  rating: string;
-  reviews: string;
+  rating: string | number;
+  reviews: string | number;
   licensed: boolean;
   capacity: string;
   licenseNumber: string;
@@ -57,14 +58,14 @@ export default function CamineDirectorPage() {
 
   const judete = useMemo(() => {
     const set = new Set<string>();
-    camineData.forEach((c: Camin) => {
+    camineData.forEach((c) => {
       if (c.judet) set.add(c.judet);
     });
     return Array.from(set).sort();
   }, []);
 
   const filtered = useMemo(() => {
-    let result = camineData as Camin[];
+    let result = camineData;
 
     if (search) {
       const q = search.toLowerCase();
@@ -97,9 +98,9 @@ export default function CamineDirectorPage() {
 
   const stats = useMemo(() => {
     const total = camineData.length;
-    const licensed = (camineData as Camin[]).filter((c) => c.licensed).length;
-    const withPhone = (camineData as Camin[]).filter((c) => c.phone).length;
-    const withWebsite = (camineData as Camin[]).filter((c) => c.website).length;
+    const licensed = camineData.filter((c) => c.licensed).length;
+    const withPhone = camineData.filter((c) => c.phone).length;
+    const withWebsite = camineData.filter((c) => c.website).length;
     return { total, licensed, withPhone, withWebsite };
   }, []);
 
