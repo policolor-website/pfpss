@@ -358,21 +358,51 @@ export default async function CaminDetailPage({
 
               {/* Right: Sidebar */}
               <div className="space-y-6">
-                {/* CTA */}
+                {/* Contact CTA */}
                 <div className="p-6 rounded-xl bg-navy-deep">
                   <h3 className="font-heading text-base font-bold text-paper mb-2">
-                    Ești furnizor de servicii sociale?
+                    Contactează acest cămin
                   </h3>
                   <p className="text-sm text-paper/60 leading-relaxed mb-4">
-                    Alătură-te PFPSS pentru reprezentare, consultanță juridică
-                    și acces la rețeaua națională.
+                    Sună direct pentru informații despre locuri disponibile,
+                    tarife și condiții de cazare.
                   </p>
-                  <Link
-                    href="/inscriere"
-                    className="group inline-flex items-center gap-2 w-full justify-center bg-gold text-navy-deep px-5 py-3 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-gold/20"
-                  >
-                    Solicită aderarea
-                  </Link>
+                  {camin.phone ? (
+                    <a
+                      href={`tel:${camin.internationalPhone || camin.phone}`}
+                      className="group inline-flex items-center gap-2 w-full justify-center bg-gold text-navy-deep px-5 py-3 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-gold/20"
+                    >
+                      <Phone className="size-4" />
+                      {camin.phone}
+                    </a>
+                  ) : camin.website ? (
+                    <a
+                      href={camin.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-2 w-full justify-center bg-gold text-navy-deep px-5 py-3 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-gold/20"
+                    >
+                      <Globe className="size-4" />
+                      Vizitează website
+                    </a>
+                  ) : mapsDirectionsUrl ? (
+                    <a
+                      href={mapsDirectionsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-2 w-full justify-center bg-gold text-navy-deep px-5 py-3 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-gold/20"
+                    >
+                      <Navigation className="size-4" />
+                      Direcții pe hartă
+                    </a>
+                  ) : (
+                    <Link
+                      href="/contact"
+                      className="group inline-flex items-center gap-2 w-full justify-center bg-gold text-navy-deep px-5 py-3 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-gold/20"
+                    >
+                      Contact PFPSS
+                    </Link>
+                  )}
                 </div>
 
                 {/* Related */}
