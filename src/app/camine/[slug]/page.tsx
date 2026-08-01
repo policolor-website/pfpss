@@ -138,17 +138,17 @@ export default async function CaminDetailPage({
           <div className="absolute top-1/2 left-1/3 -translate-y-1/2 w-[400px] h-[400px] bg-navy-deep/10 rounded-full blur-[120px]" />
 
           <div className="max-w-5xl mx-auto px-6 relative">
-            <div className="flex items-start gap-4 mb-4">
-              <div className="flex items-center justify-center size-14 rounded-xl bg-navy-deep/10 shrink-0">
-                <Building2 className="size-7 text-navy-deep" />
+            <div className="flex flex-col sm:flex-row sm:items-start gap-4 mb-4">
+              <div className="flex items-center justify-center size-12 sm:size-14 rounded-xl bg-navy-deep/10 shrink-0">
+                <Building2 className="size-6 sm:size-7 text-navy-deep" />
               </div>
-              <div className="flex-1">
-                <h1 className="font-heading text-2xl md:text-4xl font-bold text-navy-deep leading-tight text-balance">
+              <div className="flex-1 min-w-0">
+                <h1 className="font-heading text-xl sm:text-2xl md:text-4xl font-bold text-navy-deep leading-tight text-balance">
                   {camin.name}
                 </h1>
                 {camin.judet && (
                   <div className="flex items-center gap-2 text-sm text-navy-deep/50 mt-2">
-                    <MapPin className="size-4" />
+                    <MapPin className="size-4 shrink-0" />
                     {camin.localitate && (
                       <span>{camin.localitate}, </span>
                     )}
@@ -157,7 +157,7 @@ export default async function CaminDetailPage({
                 )}
               </div>
               {camin.licensed && (
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/15 border border-gold/30 shrink-0">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold/15 border border-gold/30 shrink-0 self-start">
                   <ShieldCheck className="size-4 text-gold" />
                   <span className="text-xs font-semibold text-navy-deep uppercase tracking-wide">
                     Licențiat
@@ -167,7 +167,7 @@ export default async function CaminDetailPage({
             </div>
 
             {/* Quick stats */}
-            <div className="flex flex-wrap gap-3 mt-6">
+            <div className="flex flex-wrap gap-2 sm:gap-3 mt-6">
               {camin.rating && (
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/60 border border-navy-deep/10">
                   <Star className="size-4 text-gold fill-gold" />
@@ -204,7 +204,7 @@ export default async function CaminDetailPage({
         {/* Content */}
         <section className="py-12 bg-paper">
           <div className="max-w-5xl mx-auto px-6">
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 gap-6">
               {/* Left: Contact info */}
               <div className="lg:col-span-2 space-y-6">
                 {/* Contact */}
