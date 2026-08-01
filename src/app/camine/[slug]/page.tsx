@@ -43,12 +43,13 @@ export function generateStaticParams() {
   return (camineData as Camin[]).map((c) => ({ slug: c.slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Metadata {
-  const camin = (camineData as Camin[]).find((c) => c.slug === params.slug);
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const camin = (camineData as Camin[]).find((c) => c.slug === slug);
   if (!camin) {
     return { title: "Cămin negăsit — PFPSS" };
   }
@@ -60,12 +61,13 @@ export function generateMetadata({
   };
 }
 
-export default function CaminDetailPage({
+export default async function CaminDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const camin = (camineData as Camin[]).find((c) => c.slug === params.slug);
+  const { slug } = await params;
+  const camin = (camineData as Camin[]).find((c) => c.slug === slug);
 
   if (!camin) {
     return (
