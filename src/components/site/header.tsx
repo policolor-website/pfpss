@@ -14,6 +14,7 @@ const navLinks = [
   { href: "/advocacy", label: "Advocacy" },
   { href: "/resurse", label: "Resurse" },
   { href: "/stiri", label: "Știri" },
+  { href: "/camine", label: "Cămine" },
   { href: "/petitii", label: "Petiții" },
   { href: "/contact", label: "Contact" },
 ];
