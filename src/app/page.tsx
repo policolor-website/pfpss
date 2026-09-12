@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion, useScroll, useTransform, type MotionValue } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   Scale,
@@ -124,224 +124,159 @@ function Typewriter({
   );
 }
 
-function StackCard({
-  children,
-  index,
-  progress,
-}: {
-  children: React.ReactNode;
-  index: number;
-  progress: MotionValue<number>;
-}) {
-  const [isDesktop, setIsDesktop] = useState(false);
-
-  useEffect(() => {
-    const check = () => setIsDesktop(window.innerWidth >= 768);
-    check();
-    window.addEventListener("resize", check);
-    return () => window.removeEventListener("resize", check);
-  }, []);
-
-  const x = useTransform(progress, (latest) => {
-    if (latest < 0.35 || !isDesktop) return 0;
-    const t = Math.min((latest - 0.35) / 0.3, 1);
-    return t * (index === 0 ? 420 : index === 2 ? -420 : 0);
-  });
-
-  const y = useTransform(progress, (latest) => {
-    if (latest < 0.45 || isDesktop) return 0;
-    const t = Math.min((latest - 0.45) / 0.35, 1);
-    return t * (index === 0 ? 280 : index === 2 ? -280 : 0);
-  });
-
-  const scale = useTransform(progress, [0, 0.35, 0.7], [1, 1, 0.88 - index * 0.04]);
-  const opacity = useTransform(progress, [0, 0.35, 0.7, 1], [1, 1, 0.6, 0.4]);
-
-  return (
-    <motion.div style={{ x, y, scale, opacity, zIndex: index + 1 }} className="relative">
-      {children}
-    </motion.div>
-  );
-}
-
 function AxesSection() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end end"],
-  });
-
   return (
-    <section className="py-0">
-      <section ref={ref} className="relative h-[250vh] md:h-[160vh]">
-        <div className="sticky top-0 flex flex-col justify-center overflow-hidden py-16">
-          <div className="max-w-7xl mx-auto px-6 w-full">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-100px" }}
-              variants={fadeUp}
-              custom={0}
-              className="text-center max-w-2xl mx-auto mb-8"
-            >
-              <h2 className="font-heading text-4xl md:text-5xl font-bold text-navy-deep mb-0 text-balance">
-                Trei axe de lucru pentru un sistem demn de îngrijire
-              </h2>
-            </motion.div>
-          </div>
+    <section className="py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-6 w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center max-w-2xl mx-auto mb-12"
+        >
+          <h2 className="font-heading text-4xl md:text-5xl font-bold text-navy-deep mb-0 text-balance">
+            Trei axe de lucru pentru un sistem demn de îngrijire
+          </h2>
+        </motion.div>
+      </div>
 
-          <div className="w-full max-w-7xl mx-auto px-6">
-            <div className="grid md:grid-cols-3 gap-6 perspective-1000">
-              {axes.map((axe, i) => (
-                <StackCard key={axe.title} index={i} progress={scrollYProgress}>
-                  <motion.div
-                    initial={{ opacity: 0, rotateY: 75, y: 80 }}
-                    whileInView={{ opacity: 1, rotateY: 0, y: 0 }}
-                    viewport={{ once: true, margin: "-80px" }}
-                    transition={{
-                      duration: 1.4,
-                      delay: i * 0.3,
-                      ease: [0.22, 1, 0.36, 1] as const,
-                    }}
-                    whileHover={{ rotateY: 12, scale: 1.03, transition: { duration: 0.4 } }}
-                    className="group p-8 rounded-xl border border-navy-deep/10 bg-white hover:border-gold/30 transition-colors duration-300 hover:shadow-xl hover:shadow-navy-deep/10 [transform-style:preserve-3d]"
-                  >
-                    <div className="size-12 rounded-lg bg-navy-deep/5 flex items-center justify-center mb-6 group-hover:bg-gold/10 transition-colors duration-300">
-                      <axe.icon className="size-6 text-navy-deep group-hover:text-gold transition-colors duration-300" />
-                    </div>
-                    <h3 className="font-heading text-xl font-semibold text-navy-deep mb-3">
-                      {axe.title}
-                    </h3>
-                    <p className="text-sm text-navy-deep/60 leading-relaxed">
-                      {axe.description}
-                    </p>
-                    <div className="mt-6 pt-6 border-t border-navy-deep/10">
-                      {axe.chart}
-                      <div className="mt-4">
-                        <LiveBadges setIndex={i} />
-                      </div>
-                    </div>
-                  </motion.div>
-                </StackCard>
-              ))}
-            </div>
-          </div>
+      <div className="w-full max-w-7xl mx-auto px-6">
+        <div className="grid md:grid-cols-3 gap-6">
+          {axes.map((axe, i) => (
+            <motion.div
+              key={axe.title}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-60px" }}
+              transition={{
+                duration: 0.6,
+                delay: i * 0.15,
+                ease: [0.22, 1, 0.36, 1] as const,
+              }}
+              whileHover={{ y: -6, transition: { duration: 0.3 } }}
+              className="group p-8 rounded-xl border border-navy-deep/10 bg-white hover:border-gold/40 transition-colors duration-300 hover:shadow-xl hover:shadow-navy-deep/10"
+            >
+              <div className="size-12 rounded-lg bg-navy-deep/5 flex items-center justify-center mb-6 group-hover:bg-gold/10 transition-colors duration-300">
+                <axe.icon className="size-6 text-navy-deep group-hover:text-gold transition-colors duration-300" />
+              </div>
+              <h3 className="font-heading text-xl font-semibold text-navy-deep mb-3">
+                {axe.title}
+              </h3>
+              <p className="text-sm text-navy-deep/60 leading-relaxed">
+                {axe.description}
+              </p>
+              <div className="mt-6 pt-6 border-t border-navy-deep/10">
+                {axe.chart}
+                <div className="mt-4">
+                  <LiveBadges setIndex={i} />
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
-      </section>
+      </div>
     </section>
   );
 }
 
 function SectorSection() {
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end end"],
-  });
-
   return (
-    <section className="py-0 bg-paper">
-      <section ref={ref} className="relative h-[250vh] md:h-[160vh]">
-        <div className="sticky top-0 flex flex-col justify-center overflow-hidden py-16">
-          <div className="max-w-7xl mx-auto px-6 w-full">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="text-center max-w-2xl mx-auto mb-8"
-            >
-              <h2 className="font-heading text-4xl md:text-5xl font-bold text-navy-deep mb-2 text-balance">
-                Starea sectorului în cifre
-              </h2>
-              <p className="text-navy-deep/60">
-                Date actualizate despre căminele private de îngrijire a vârstnicilor din România
-              </p>
-            </motion.div>
-          </div>
+    <section className="py-20 md:py-28 bg-paper">
+      <div className="max-w-7xl mx-auto px-6 w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center max-w-2xl mx-auto mb-12"
+        >
+          <h2 className="font-heading text-4xl md:text-5xl font-bold text-navy-deep mb-2 text-balance">
+            Starea sectorului în cifre
+          </h2>
+          <p className="text-navy-deep/60">
+            Date actualizate despre căminele private de îngrijire a vârstnicilor din România
+          </p>
+        </motion.div>
+      </div>
 
-          <div className="w-full max-w-7xl mx-auto px-6">
-            <div className="grid lg:grid-cols-3 gap-6">
-              <StackCard key="statut" index={0} progress={scrollYProgress}>
-                <motion.div
-                  initial={{ opacity: 0, x: 60 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.6, delay: 0, ease: "easeOut" }}
-                  className="p-8 rounded-xl border border-navy-deep/10 bg-white hover:border-gold/30 transition-all duration-300 hover:shadow-lg hover:shadow-navy-deep/5"
-                >
-                  <h3 className="font-heading text-lg font-semibold text-navy-deep mb-2">
-                    Statutul căminelor
-                  </h3>
-                  <p className="text-xs text-navy-deep/50 mb-6">
-                    Total: 1.142 cămine private în România
-                  </p>
-                  <SectorStatusChart />
-                  <div className="mt-4">
-                    <LiveBadges setIndex={3} />
-                  </div>
-                </motion.div>
-              </StackCard>
-
-              <StackCard key="licentieri" index={1} progress={scrollYProgress}>
-                <motion.div
-                  initial={{ opacity: 0, x: 60 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.6, delay: 0.25, ease: "easeOut" }}
-                  className="p-8 rounded-xl border border-navy-deep/10 bg-white hover:border-gold/30 transition-all duration-300 hover:shadow-lg hover:shadow-navy-deep/5"
-                >
-                  <h3 className="font-heading text-lg font-semibold text-navy-deep mb-2">
-                    Evoluția licențierilor
-                  </h3>
-                  <p className="text-xs text-navy-deep/50 mb-6">
-                    Licențe emise vs. retrase (2022–2026)
-                  </p>
-                  <LicensingTimelineChart />
-                  <div className="mt-4">
-                    <LiveBadges setIndex={4} />
-                  </div>
-                </motion.div>
-              </StackCard>
-
-              <StackCard key="activitate" index={2} progress={scrollYProgress}>
-                <motion.div
-                  initial={{ opacity: 0, x: 60 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-80px" }}
-                  transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
-                  className="p-8 rounded-xl border border-navy-deep/10 bg-white hover:border-gold/30 transition-all duration-300 hover:shadow-lg hover:shadow-navy-deep/5"
-                >
-                  <h3 className="font-heading text-lg font-semibold text-navy-deep mb-2">
-                    Activitatea PFPSS
-                  </h3>
-                  <p className="text-xs text-navy-deep/50 mb-6">
-                    Acțiuni lunare: petiții, scrisori, întâlniri
-                  </p>
-                  <PfpssActivityChart />
-                  <div className="mt-4">
-                    <LiveBadges setIndex={5} />
-                  </div>
-                  <div className="mt-6 grid grid-cols-3 gap-4 pt-6 border-t border-navy-deep/10">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-navy-deep">42</div>
-                      <div className="text-xs text-navy-deep/50">Petiții</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-navy-deep">18</div>
-                      <div className="text-xs text-navy-deep/50">Scrisori oficiale</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-navy-deep">27</div>
-                      <div className="text-xs text-navy-deep/50">Întâlniri</div>
-                    </div>
-                  </div>
-                </motion.div>
-              </StackCard>
+      <div className="w-full max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-3 gap-6">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6, delay: 0, ease: [0.22, 1, 0.36, 1] as const }}
+            whileHover={{ y: -6, transition: { duration: 0.3 } }}
+            className="p-8 rounded-xl border border-navy-deep/10 bg-white hover:border-gold/40 transition-colors duration-300 hover:shadow-lg hover:shadow-navy-deep/5"
+          >
+            <h3 className="font-heading text-lg font-semibold text-navy-deep mb-2">
+              Statutul căminelor
+            </h3>
+            <p className="text-xs text-navy-deep/50 mb-6">
+              Total: 1.142 cămine private în România
+            </p>
+            <SectorStatusChart />
+            <div className="mt-4">
+              <LiveBadges setIndex={3} />
             </div>
-          </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] as const }}
+            whileHover={{ y: -6, transition: { duration: 0.3 } }}
+            className="p-8 rounded-xl border border-navy-deep/10 bg-white hover:border-gold/40 transition-colors duration-300 hover:shadow-lg hover:shadow-navy-deep/5"
+          >
+            <h3 className="font-heading text-lg font-semibold text-navy-deep mb-2">
+              Evoluția licențierilor
+            </h3>
+            <p className="text-xs text-navy-deep/50 mb-6">
+              Licențe emise vs. retrase (2022–2026)
+            </p>
+            <LicensingTimelineChart />
+            <div className="mt-4">
+              <LiveBadges setIndex={4} />
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] as const }}
+            whileHover={{ y: -6, transition: { duration: 0.3 } }}
+            className="p-8 rounded-xl border border-navy-deep/10 bg-white hover:border-gold/40 transition-colors duration-300 hover:shadow-lg hover:shadow-navy-deep/5"
+          >
+            <h3 className="font-heading text-lg font-semibold text-navy-deep mb-2">
+              Activitatea PFPSS
+            </h3>
+            <p className="text-xs text-navy-deep/50 mb-6">
+              Acțiuni lunare: petiții, scrisori, întâlniri
+            </p>
+            <PfpssActivityChart />
+            <div className="mt-4">
+              <LiveBadges setIndex={5} />
+            </div>
+            <div className="mt-6 grid grid-cols-3 gap-4 pt-6 border-t border-navy-deep/10">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-navy-deep">42</div>
+                <div className="text-xs text-navy-deep/50">Petiții</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-navy-deep">18</div>
+                <div className="text-xs text-navy-deep/50">Scrisori oficiale</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-navy-deep">27</div>
+                <div className="text-xs text-navy-deep/50">Întâlniri</div>
+              </div>
+            </div>
+          </motion.div>
         </div>
-      </section>
+      </div>
     </section>
   );
 }

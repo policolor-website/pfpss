@@ -103,7 +103,7 @@ export function SiteHeader() {
 
             {/* Signup button */}
             <Link
-              href="/signup"
+              href="/inscriere"
               className="hidden sm:inline-flex items-center bg-navy-deep text-paper px-5 py-2 rounded-sm text-sm font-semibold hover:bg-navy-light transition-colors"
             >
               Devino membru
@@ -150,7 +150,7 @@ export function SiteHeader() {
                 Login membri
               </Link>
               <Link
-                href="/signup"
+                href="/inscriere"
                 className="py-3 mt-2 inline-flex items-center justify-center bg-navy-deep text-paper px-5 py-2.5 rounded-sm text-sm font-semibold"
                 onClick={() => setMobileOpen(false)}
               >

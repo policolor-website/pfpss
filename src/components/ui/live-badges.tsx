@@ -73,7 +73,7 @@ function shuffle<T>(arr: T[]): T[] {
 
 export function LiveBadges({ setIndex }: { setIndex: number }) {
   const sourceBadges = badgeSets[setIndex] ?? badgeSets[0];
-  const [visible, setVisible] = useState<Badge[]>(() => shuffle(sourceBadges).slice(0, 2));
+  const [visible, setVisible] = useState<Badge[]>(() => sourceBadges.slice(0, 2));
   const [tick, setTick] = useState(0);
 
   useEffect(() => {
@@ -84,7 +84,6 @@ export function LiveBadges({ setIndex }: { setIndex: number }) {
   }, []);
 
   useEffect(() => {
-    if (tick === 0) return;
     const pool = shuffle(sourceBadges);
     const next = pool.slice(0, 2 + (tick % 2));
     setVisible(next);
