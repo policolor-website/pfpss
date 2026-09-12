@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -10,7 +10,7 @@ import { SiteFooter } from "@/components/site/footer";
 import { createClient } from "@/lib/supabase/client";
 import { toast } from "sonner";
 
-export default function LoginPage() {
+function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const registered = searchParams.get("registered");
@@ -50,103 +50,111 @@ export default function LoginPage() {
   }
 
   return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4 }}
+      className="w-full max-w-md"
+    >
+      {registered && (
+        <div className="mb-6 flex items-start gap-3 p-4 rounded-xl bg-emerald-50 border border-emerald-200">
+          <CheckCircle2 className="size-5 text-emerald-600 shrink-0 mt-0.5" />
+          <div>
+            <p className="text-sm font-medium text-emerald-800">
+              Cererea a fost trimisă!
+            </p>
+            <p className="text-sm text-emerald-700 mt-1">
+              Confirmă adresa de email apoi te poți autentifica. Echipa PFPSS
+              va valida cererea în 48h.
+            </p>
+          </div>
+        </div>
+      )}
+
+      <div className="bg-white rounded-2xl border border-navy-deep/10 shadow-sm p-8">
+        <div className="flex items-center justify-center size-14 rounded-xl bg-navy-deep/5 mb-6 mx-auto">
+          <ShieldCheck className="size-7 text-navy-deep" />
+        </div>
+
+        <h1 className="font-heading text-2xl font-bold text-navy-deep text-center mb-1">
+          Autentificare membri
+        </h1>
+        <p className="text-sm text-navy-deep/50 text-center mb-8">
+          Accesează portalul PFPSS
+        </p>
+
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <div>
+            <label className="block text-sm font-medium text-navy-deep mb-1.5">
+              Email
+            </label>
+            <input
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-4 py-3 rounded-lg border border-navy-deep/15 bg-paper/50 text-navy-deep focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-colors"
+              placeholder="email@organizatie.ro"
+            />
+          </div>
+
+          <div>
+            <label className="block text-sm font-medium text-navy-deep mb-1.5">
+              Parolă
+            </label>
+            <input
+              type="password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full px-4 py-3 rounded-lg border border-navy-deep/15 bg-paper/50 text-navy-deep focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-colors"
+              placeholder="••••••••"
+            />
+          </div>
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full inline-flex items-center justify-center gap-2 bg-navy-deep text-paper py-3.5 rounded-lg font-semibold text-sm hover:bg-navy-light transition-colors disabled:opacity-50"
+          >
+            {loading ? (
+              <>
+                <Loader2 className="size-4 animate-spin" />
+                Se autentifică...
+              </>
+            ) : (
+              <>
+                Intră în cont
+                <ArrowRight className="size-4" />
+              </>
+            )}
+          </button>
+        </form>
+
+        <div className="mt-6 pt-6 border-t border-navy-deep/10 text-center">
+          <p className="text-sm text-navy-deep/50">
+            Nu ești încă membru?{" "}
+            <Link
+              href="/inscriere"
+              className="text-gold font-medium hover:underline"
+            >
+              Solicită aderarea
+            </Link>
+          </p>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+export default function LoginPage() {
+  return (
     <>
       <SiteHeader />
       <main className="flex-1 bg-paper flex items-center justify-center min-h-[calc(100vh-5rem)] px-6 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="w-full max-w-md"
-        >
-          {registered && (
-            <div className="mb-6 flex items-start gap-3 p-4 rounded-xl bg-emerald-50 border border-emerald-200">
-              <CheckCircle2 className="size-5 text-emerald-600 shrink-0 mt-0.5" />
-              <div>
-                <p className="text-sm font-medium text-emerald-800">
-                  Cererea a fost trimisă!
-                </p>
-                <p className="text-sm text-emerald-700 mt-1">
-                  Confirmă adresa de email apoi te poți autentifica. Echipa PFPSS
-                  va valida cererea în 48h.
-                </p>
-              </div>
-            </div>
-          )}
-
-          <div className="bg-white rounded-2xl border border-navy-deep/10 shadow-sm p-8">
-            <div className="flex items-center justify-center size-14 rounded-xl bg-navy-deep/5 mb-6 mx-auto">
-              <ShieldCheck className="size-7 text-navy-deep" />
-            </div>
-
-            <h1 className="font-heading text-2xl font-bold text-navy-deep text-center mb-1">
-              Autentificare membri
-            </h1>
-            <p className="text-sm text-navy-deep/50 text-center mb-8">
-              Accesează portalul PFPSS
-            </p>
-
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div>
-                <label className="block text-sm font-medium text-navy-deep mb-1.5">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg border border-navy-deep/15 bg-paper/50 text-navy-deep focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-colors"
-                  placeholder="email@organizatie.ro"
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-navy-deep mb-1.5">
-                  Parolă
-                </label>
-                <input
-                  type="password"
-                  required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="w-full px-4 py-3 rounded-lg border border-navy-deep/15 bg-paper/50 text-navy-deep focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-colors"
-                  placeholder="••••••••"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full inline-flex items-center justify-center gap-2 bg-navy-deep text-paper py-3.5 rounded-lg font-semibold text-sm hover:bg-navy-light transition-colors disabled:opacity-50"
-              >
-                {loading ? (
-                  <>
-                    <Loader2 className="size-4 animate-spin" />
-                    Se autentifică...
-                  </>
-                ) : (
-                  <>
-                    Intră în cont
-                    <ArrowRight className="size-4" />
-                  </>
-                )}
-              </button>
-            </form>
-
-            <div className="mt-6 pt-6 border-t border-navy-deep/10 text-center">
-              <p className="text-sm text-navy-deep/50">
-                Nu ești încă membru?{" "}
-                <Link
-                  href="/inscriere"
-                  className="text-gold font-medium hover:underline"
-                >
-                  Solicită aderarea
-                </Link>
-              </p>
-            </div>
-          </div>
-        </motion.div>
+        <Suspense fallback={null}>
+          <LoginForm />
+        </Suspense>
       </main>
       <SiteFooter />
     </>
