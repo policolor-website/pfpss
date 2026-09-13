@@ -19,6 +19,8 @@ import {
 } from "lucide-react";
 import { SiteHeader } from "@/components/site/header";
 import { SiteFooter } from "@/components/site/footer";
+import { CamineKpiCards, PrivatPublicChart } from "@/components/charts/camine-charts";
+import { GapAnalysisChart } from "@/components/charts/gap-analysis-chart";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -467,6 +469,45 @@ export default function DesprePage() {
                   Autentificare membri
                   <ArrowRight className="size-4" />
                 </Link>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Date statistice — 2 grafice */}
+        <section className="py-16 bg-paper">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                className="bg-white rounded-xl border border-navy-deep/10 p-6"
+              >
+                <h3 className="font-heading text-lg font-semibold text-navy-deep mb-1">
+                  Cămine licențiate în România
+                </h3>
+                <p className="text-xs text-navy-deep/50 mb-4">
+                  794 cămine · 34.310 locuri · 43 locuri/cămin · 42 județe
+                </p>
+                <PrivatPublicChart />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+                className="bg-white rounded-xl border border-navy-deep/10 p-6"
+              >
+                <h3 className="font-heading text-lg font-semibold text-navy-deep mb-1">
+                  Nevoia vs capacitatea națională
+                </h3>
+                <p className="text-xs text-navy-deep/50 mb-4">
+                  2,35M vârstnici 70+ vs 34.310 locuri · 1,46% acoperire
+                </p>
+                <GapAnalysisChart />
               </motion.div>
             </div>
           </div>

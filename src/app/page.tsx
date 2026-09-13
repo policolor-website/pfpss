@@ -20,6 +20,7 @@ import { RepresentationChart } from "@/components/charts/representation-chart";
 import { SectorStatusChart } from "@/components/charts/sector-status-chart";
 import { LicensingTimelineChart } from "@/components/charts/licensing-timeline-chart";
 import { PfpssActivityChart } from "@/components/charts/pfpss-activity-chart";
+import { CamineKpiCards, PrivatPublicChart, CapacitateChart } from "@/components/charts/camine-charts";
 
 const axes = [
   {
@@ -487,7 +488,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Cămine autorizate — secțiune */}
+        {/* Cămine autorizate — secțiune cu grafice profesionale */}
         <section className="py-16 bg-paper">
           <div className="max-w-7xl mx-auto px-6">
             <motion.div
@@ -503,43 +504,48 @@ export default function Home() {
                 <p className="text-navy-deep/60 max-w-2xl mx-auto">
                   Lista oficială a căminelor pentru persoane vârstnice licențiate
                   de Ministerul Muncii, Familiei, Tineretului și Solidarității
-                  Sociale
+                  Sociale · Date actualizate 2026
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10">
-                <div className="bg-white rounded-xl border border-navy-deep/10 p-6 text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-navy-deep">
-                    792
-                  </div>
-                  <div className="text-xs text-navy-deep/50 uppercase tracking-wide mt-1">
-                    Total cămine
-                  </div>
-                </div>
-                <div className="bg-white rounded-xl border border-navy-deep/10 p-6 text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-navy-deep">
-                    672
-                  </div>
-                  <div className="text-xs text-navy-deep/50 uppercase tracking-wide mt-1">
-                    Private
-                  </div>
-                </div>
-                <div className="bg-white rounded-xl border border-navy-deep/10 p-6 text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-navy-deep">
-                    120
-                  </div>
-                  <div className="text-xs text-navy-deep/50 uppercase tracking-wide mt-1">
-                    Publice
-                  </div>
-                </div>
-                <div className="bg-white rounded-xl border border-navy-deep/10 p-6 text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-navy-deep">
-                    42
-                  </div>
-                  <div className="text-xs text-navy-deep/50 uppercase tracking-wide mt-1">
-                    Județe
-                  </div>
-                </div>
+              {/* KPI cards îmbogățite */}
+              <div className="mb-10">
+                <CamineKpiCards />
+              </div>
+
+              {/* Grafice — Doughnut + Bar chart */}
+              <div className="grid md:grid-cols-2 gap-6 mb-10">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+                  className="bg-white rounded-xl border border-navy-deep/10 p-6"
+                >
+                  <h3 className="font-heading text-lg font-semibold text-navy-deep mb-1">
+                    Privat vs Public
+                  </h3>
+                  <p className="text-xs text-navy-deep/50 mb-4">
+                    Distribuția căminelor licențiate după tipul furnizorului
+                  </p>
+                  <PrivatPublicChart />
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                  className="bg-white rounded-xl border border-navy-deep/10 p-6"
+                >
+                  <h3 className="font-heading text-lg font-semibold text-navy-deep mb-1">
+                    Distribuția capacității
+                  </h3>
+                  <p className="text-xs text-navy-deep/50 mb-4">
+                    Numărul de cămine grupate după capacitatea de locuri
+                  </p>
+                  <CapacitateChart />
+                </motion.div>
               </div>
 
               <div className="text-center">
@@ -547,7 +553,7 @@ export default function Home() {
                   href="/camine-autorizate"
                   className="group inline-flex items-center gap-2 bg-navy-deep text-white px-8 py-3.5 rounded-sm font-semibold text-sm transition-all duration-300 hover:bg-navy-deep/90 hover:shadow-lg hover:shadow-navy-deep/20"
                 >
-                  Vezi detalii
+                  Vezi lista completă
                   <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>

@@ -2,6 +2,22 @@
 
 import { useMemo } from "react";
 import { motion } from "framer-motion";
+import {
+  House,
+  Building,
+  Building2,
+  Hotel,
+  Hospital,
+  School,
+  Church,
+  Warehouse,
+  Store,
+  HouseHeart,
+  HousePlus,
+  HouseWifi,
+  HousePlug,
+  MapPinHouse,
+} from "lucide-react";
 
 type County = {
   id: string;
@@ -78,10 +94,34 @@ const counties: County[] = [
 const NAVY = "#1a2332";
 const GOLD = "#c9a961";
 
+// 14 different house icons — rotated across counties
+const houseIcons = [
+  House, Building, Building2, Hotel, Hospital, School, Church,
+  Warehouse, Store, HouseHeart, HousePlus, HouseWifi, HousePlug, MapPinHouse,
+];
+
+// Colors for the 2 icons per county
+const iconColors = [
+  "#c9a961", // gold
+  "#1a2332", // navy
+  "#d4756b", // warm red
+  "#5b8c7e", // sage green
+  "#7b6cd9", // purple
+  "#e8945a", // orange
+  "#4a90b8", // blue
+  "#b8527a", // pink
+];
+
 const routes = counties.slice(1).map((c) => ({
   start: counties[0],
   end: c,
 }));
+
+// Seeded random for stable per-county randomness
+function seededRandom(seed: number): number {
+  const x = Math.sin(seed * 12.9898) * 43758.5453;
+  return x - Math.floor(x);
+}
 
 export function RomaniaMap({ className = "" }: { className?: string }) {
   const arcs = useMemo(
@@ -92,6 +132,28 @@ export function RomaniaMap({ className = "" }: { className?: string }) {
       })),
     []
   );
+
+  // Pre-generate random icon counts (5-9) and positions per county
+  const countyIcons = useMemo(() => {
+    return counties.map((c, idx) => {
+      const count = 7 + Math.floor(seededRandom(idx * 7.3) * 6); // 7..12
+      const icons = Array.from({ length: count }, (_, j) => {
+        const r1 = seededRandom(idx * 100 + j * 3.1);
+        const r2 = seededRandom(idx * 100 + j * 3.1 + 1);
+        const r3 = seededRandom(idx * 100 + j * 3.1 + 2);
+        const r4 = seededRandom(idx * 100 + j * 3.1 + 3);
+        return {
+          iconIdx: Math.floor(r1 * houseIcons.length),
+          colorIdx: Math.floor(r2 * iconColors.length),
+          offsetX: Math.round((r3 - 0.5) * 50 * 100) / 100, // round to avoid hydration mismatch
+          offsetY: Math.round((r4 - 0.5) * 50 * 100) / 100,
+          size: 12 + Math.floor(r1 * 8), // 12-19px
+          delay: j * 0.12,
+        };
+      });
+      return { county: c, icons, idx };
+    });
+  }, []);
 
   return (
     <div className={`relative w-full h-full ${className}`}>
@@ -148,10 +210,11 @@ export function RomaniaMap({ className = "" }: { className?: string }) {
           ))}
         </g>
 
-        {/* County markers + labels */}
+        {/* County markers + house icons + labels */}
         <g>
-          {counties.map((c) => {
+          {countyIcons.map(({ county: c, icons, idx }) => {
             const isHub = c.label === "București";
+            const lineArriveDelay = isHub ? 0 : 2.3 + (idx - 1) * 0.06;
             return (
               <g key={c.id}>
                 {isHub ? (
@@ -174,11 +237,51 @@ export function RomaniaMap({ className = "" }: { className?: string }) {
                     </text>
                   </>
                 ) : (
-                  <circle cx={c.x} cy={c.y} r={4} fill={NAVY} />
+                  <>
+                    {icons.map((ic, j) => {
+                      const HouseIcon = houseIcons[ic.iconIdx];
+                      const color = iconColors[ic.colorIdx];
+                      return (
+                        <foreignObject
+                          key={`icon-${idx}-${j}`}
+                          x={c.x + ic.offsetX - ic.size / 2}
+                          y={c.y + ic.offsetY - ic.size / 2}
+                          width={ic.size}
+                          height={ic.size}
+                        >
+                          <motion.div
+                            initial={{ scale: 0, opacity: 0 }}
+                            animate={{ scale: [0, 1], opacity: [0, j === 0 ? 1 : 0.8] }}
+                            transition={{
+                              duration: 0.5,
+                              delay: lineArriveDelay + ic.delay,
+                              ease: "backOut",
+                              repeat: Infinity,
+                              repeatType: "reverse",
+                              repeatDelay: 4,
+                            }}
+                            style={{
+                              width: ic.size,
+                              height: ic.size,
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                            }}
+                          >
+                            <HouseIcon
+                              size={ic.size - 2}
+                              strokeWidth={1.5}
+                              style={{ color }}
+                            />
+                          </motion.div>
+                        </foreignObject>
+                      );
+                    })}
+                  </>
                 )}
                 {!isHub && (
                   <text
-                    x={c.x + 8}
+                    x={c.x + 22}
                     y={c.y + 3}
                     fontSize={7}
                     fontWeight={400}
