@@ -1,0 +1,939 @@
+{
+  "header": {
+    "nav": {
+      "home": "Acasă",
+      "about": "Despre",
+      "members": "Membri",
+      "advocacy": "Advocacy",
+      "resources": "Resurse",
+      "news": "Știri",
+      "careHomes": "Cămine",
+      "petitions": "Petiții",
+      "contact": "Contact"
+    },
+    "actions": {
+      "loginMembers": "Login membri",
+      "becomeMember": "Devino membru",
+      "menu": "Meniu"
+    },
+    "lang": {
+      "romanian": "Română",
+      "english": "English"
+    }
+  },
+  "footer": {
+    "description": "Patronatul Furnizorilor Privați de Servicii Sociale din România este organizația reprezentativă a sectorului rezidențial privat de îngrijire a vârstnicilor.",
+    "sections": {
+      "contact": "Contact",
+      "navigation": "Navigare"
+    },
+    "nav": {
+      "aboutUs": "Despre noi",
+      "advocacy": "Advocacy",
+      "petitions": "Petiții",
+      "resources": "Resurse",
+      "news": "Știri",
+      "becomeMember": "Devino membru",
+      "contact": "Contact",
+      "privacy": "Confidențialitate",
+      "terms": "Termeni",
+      "cookies": "Cookies"
+    },
+    "legal": {
+      "name": "Denumire:",
+      "cui": "CUI:",
+      "address": "Sediu:",
+      "addressValue": "Phoenicia Business Center, Corp A, interfon 14, Str. Turturelelor 11b, bl. A, sc. A, et. 1, ap. a14, Sector 3, București",
+      "disputeResolution": "Soluționarea litigiilor:"
+    },
+    "copyright": "© {year} PFPSS. Toate drepturile rezervate."
+  },
+  "home": {
+    "badge": "Patronatul Furnizorilor Privați de Servicii Sociale din România",
+    "hero": {
+      "title1": "Reprezentăm",
+      "title1Suffix": "căminele.",
+      "title2": "Transformăm",
+      "title2Suffix": "sistemul.",
+      "description": "Reprezentăm furnizorii privați de servicii sociale în dialogul cu autoritățile publice, asigurând un cadru legislativ sustenabil și demn pentru centrele rezidențiale.",
+      "becomeMember": "Devino membru",
+      "aboutPatronat": "Despre patronat",
+      "activeMembers": "Membri activi reprezentați la nivel național"
+    },
+    "openLetter": {
+      "badge": "Scrisoare deschisă către Ministerul Muncii",
+      "text": "PFPSS a transmis oficial ministrului Muncii solicitarea de a continua simplificarea licențierii și de a orienta controalele către protejarea efectivă a beneficiarilor — nu către hârtii. Demersul se sprijină pe scrisoarea Comisarului pentru Drepturile Omului al Consiliului Europei.",
+      "readLetter": "Citește scrisoarea"
+    },
+    "dignity": {
+      "title": "Demnitate, profesionalism și predictibilitate pentru fiecare beneficiar",
+      "description": "Centrele rezidențiale private acoperă astăzi un deficit pe care statul nu îl poate susține singur. PFPSS militează pentru un parteneriat real public-privat, în care vârstnicii beneficiază de servicii sigure, transparente și finanțate echitabil.",
+      "aboutPatronat": "Despre patronat"
+    },
+    "careHomes": {
+      "title": "Cămine autorizate în România",
+      "description": "Lista oficială a căminelor pentru persoane vârstnice licențiate de Ministerul Muncii, Familiei, Tineretului și Solidarității Sociale · Date actualizate 2026",
+      "privateVsPublic": "Privat vs Public",
+      "privateVsPublicDesc": "Distribuția căminelor licențiate după tipul furnizorului",
+      "capacityDist": "Distribuția capacității",
+      "capacityDistDesc": "Numărul de cămine grupate după capacitatea de locuri",
+      "viewFullList": "Vezi lista completă"
+    },
+    "axes": {
+      "title": "Trei axe de lucru pentru un sistem demn de îngrijire",
+      "advocacy": {
+        "title": "Advocacy legislativ",
+        "description": "Monitorizăm cadrul legal, purtăm dialog instituțional și redactăm opinii juridice relevante pentru modificarea legislației — pentru un mediu echitabil și predictibil pentru furnizorii privați."
+      },
+      "standards": {
+        "title": "Standarde de calitate",
+        "description": "Dezvoltăm ghiduri de bune practici și certificări interne care depășesc normele minime impuse de stat."
+      },
+      "representation": {
+        "title": "Reprezentare instituțională",
+        "description": "Facilităm dialogul între sectorul privat și Ministerul Muncii pentru îmbunătățirea sistemului de asistență socială."
+      }
+    },
+    "news": {
+      "title": "Poziții publice & Știri",
+      "subtitle": "Ultimele articole și poziții oficiale ale PFPSS",
+      "viewArchive": "Vezi toată arhiva"
+    },
+    "sector": {
+      "title": "Starea sectorului în cifre",
+      "subtitle": "Date actualizate despre căminele private de îngrijire a vârstnicilor din România",
+      "homeStatus": "Statutul căminelor",
+      "homeStatusDesc": "Total: 1.142 cămine private în România",
+      "licensingEvolution": "Evoluția licențierilor",
+      "licensingEvolutionDesc": "Licențe emise vs. retrase (2022–2026)",
+      "pfpssActivity": "Activitatea PFPSS",
+      "pfpssActivityDesc": "Acțiuni lunare: petiții, scrisori, întâlniri",
+      "petitions": "Petiții",
+      "officialLetters": "Scrisori oficiale",
+      "meetings": "Întâlniri"
+    },
+    "cta": {
+      "title": "Vocea ta contează în fața autorităților",
+      "description": "Alătură-te comunității PFPSS pentru consultanță juridică, reprezentare instituțională și acces la rețeaua noastră de furnizori.",
+      "becomeMemberToday": "Devino membru astăzi"
+    }
+  },
+  "login": {
+    "title": "Autentificare membri",
+    "subtitle": "Accesează portalul PFPSS",
+    "email": "Email",
+    "emailPlaceholder": "email@organizatie.ro",
+    "password": "Parolă",
+    "passwordPlaceholder": "••••••••",
+    "submit": "Intră în cont",
+    "submitting": "Se autentifică...",
+    "success": "Bine ai revenit!",
+    "notMember": "Nu ești încă membru?",
+    "requestAccess": "Solicită aderarea",
+    "registered": {
+      "title": "Cererea a fost trimisă!",
+      "description": "Confirmă adresa de email apoi te poți autentifica. Echipa PFPSS va valida cererea în 48h."
+    }
+  },
+  "inscriere": {
+    "title": "Solicită aderarea",
+    "subtitle": "Completează formularul cu datele organizației tale. Echipa PFPSS va valida cererea în maximum 48 de ore lucrătoare.",
+    "backToMembers": "Înapoi la membri",
+    "select": "Selectează",
+    "password": "Parolă",
+    "passwordPlaceholder": "Minim 6 caractere",
+    "confirmPassword": "Confirmă parola",
+    "confirmPasswordPlaceholder": "Repetă parola",
+    "passwordsMismatch": "Parolele nu coincid",
+    "haveAccount": "Ai deja cont?",
+    "login": "Autentifică-te",
+    "steps": {
+      "account": "Cont",
+      "organization": "Organizație",
+      "licenses": "Licențe"
+    },
+    "account": {
+      "title": "Creează contul",
+      "description": "Vei folosi aceste date pentru a te autentifica în portalul membrilor."
+    },
+    "org": {
+      "title": "Datele organizației",
+      "description": "Descriere organizație",
+      "email": "Email",
+      "emailPlaceholder": "email@organizatie.ro",
+      "legalName": "Denumire legală",
+      "legalNamePlaceholder": "ex: Căminul Speranța SRL",
+      "cui": "CUI",
+      "cuiPlaceholder": "RO12345678",
+      "regNumber": "Nr. înregistrare",
+      "regNumberPlaceholder": "J40/1234/2020",
+      "legalForm": "Formă juridică",
+      "contactName": "Persoană de contact",
+      "contactNamePlaceholder": "Nume complet",
+      "contactEmail": "Email contact",
+      "contactEmailPlaceholder": "email@organizatie.ro",
+      "contactPhone": "Telefon contact",
+      "contactPhonePlaceholder": "07XX XXX XXX",
+      "county": "Județ",
+      "city": "Oraș",
+      "cityPlaceholder": "Oraș",
+      "address": "Adresă",
+      "addressPlaceholder": "Strada, nr.",
+      "serviceType": "Tip serviciu",
+      "descriptionPlaceholder": "Scurtă descriere a organizației și a serviciilor oferite..."
+    },
+    "licenses": {
+      "title": "Licențe și acreditări",
+      "description": "Detaliile despre licența de funcționare și acreditare.",
+      "number": "Nr. licență",
+      "numberPlaceholder": "ex: LF-1234/2024",
+      "expiry": "Expiră la",
+      "accreditation": "Nr. acreditare",
+      "accreditationPlaceholder": "ex: AC-5678/2023",
+      "capacity": "Capacitate (locuri)",
+      "capacityPlaceholder": "ex: 50"
+    },
+    "actions": {
+      "next": "Continuă",
+      "back": "Înapoi",
+      "submit": "Trimite cererea",
+      "submitting": "Se trimite..."
+    },
+    "success": {
+      "title": "Cererea a fost trimisă! Verifică emailul pentru confirmare."
+    },
+    "errors": {
+      "requiredFields": "Completează toate câmpurile obligatorii",
+      "accountFailed": "Nu s-a putut crea contul",
+      "submitFailed": "A apărut o eroare. Te rugăm să încerci din nou."
+    }
+  },
+  "dashboard": {
+    "portal": "Portal membri",
+    "organization": "Organizație",
+    "publicSite": "Site public",
+    "logout": "Deconectare",
+    "nav": {
+      "overview": "Overview",
+      "profile": "Profil organizație",
+      "fee": "Cotizație",
+      "documents": "Documente",
+      "petitions": "Petiții"
+    },
+    "status": {
+      "pending": "În așteptare",
+      "approved": "Aprobat",
+      "rejected": "Respins",
+      "suspended": "Suspendat"
+    },
+    "overview": {
+      "welcome": "Bun venit{name}",
+      "subtitle": "Panoul de control al organizației tale în PFPSS",
+      "pendingTitle": "Cererea de aderare este în validare",
+      "pendingDesc": "Echipa PFPSS verifică dosarul tău. Vei primi un email la aprobare, de obicei în maximum 48 de ore lucrătoare.",
+      "rejectedTitle": "Cererea a fost respinsă",
+      "rejectedDesc": "Contactează PFPSS pentru detalii și pași următori.",
+      "memberStatus": "Status membru",
+      "feePaid": "Plătită",
+      "feeUnpaid": "Neplătită",
+      "currentMonthFee": "Cotizație luna curentă",
+      "feePaidLabel": "Achitată",
+      "feeToPay": "De plată",
+      "county": "Județ",
+      "memberSince": "Membru din",
+      "recentDocs": "Documente recente",
+      "viewAll": "Toate",
+      "docsAfterApproval": "Documentele sunt disponibile după aprobarea cererii.",
+      "noDocsYet": "Nu există documente încă.",
+      "orgInfo": "Informații organizație",
+      "orgName": "Denumire",
+      "serviceType": "Tip serviciu",
+      "editProfile": "Editează profilul"
+    },
+    "profile": {
+      "title": "Profil organizație",
+      "subtitle": "Actualizează datele organizației tale",
+      "legalName": "Denumire legală",
+      "cui": "CUI",
+      "regNumber": "Nr. înregistrare",
+      "legalForm": "Formă juridică",
+      "contactName": "Persoană de contact",
+      "contactEmail": "Email contact",
+      "phone": "Telefon",
+      "website": "Website",
+      "county": "Județ",
+      "city": "Oraș",
+      "address": "Adresă",
+      "licenseNumber": "Nr. licență",
+      "licenseExpiry": "Expiră la",
+      "accreditationNumber": "Nr. acreditare",
+      "capacity": "Capacitate (locuri)",
+      "description": "Descriere",
+      "select": "Selectează",
+      "save": "Salvează modificările",
+      "saveError": "Eroare la salvare",
+      "saveSuccess": "Profil actualizat"
+    },
+    "cotizatie": {
+      "title": "Cotizație lunară",
+      "subtitle": "Cotizația de membru PFPSS — 500 RON / lună",
+      "paid": "Plătită",
+      "unpaid": "Neplătită",
+      "paidOn": "Plătită la {date}",
+      "paidDesc": "Cotizația pentru {period} a fost achitată",
+      "downloadInvoice": "Descarcă factura",
+      "processing": "Se procesează...",
+      "pay": "Plătește {amount} RON",
+      "payError": "Eroare la crearea plății",
+      "history": "Istoric cotizații",
+      "colMonth": "Lună",
+      "colAmount": "Sumă",
+      "colStatus": "Status",
+      "colDate": "Data"
+    },
+    "documente": {
+      "title": "Documente",
+      "subtitle": "Resurse și documente pentru membrii PFPSS",
+      "restrictedTitle": "Documentele sunt restricționate",
+      "restrictedDesc": "Documentele private sunt disponibile după aprobarea cererii de aderare.",
+      "noDocs": "Nu există documente disponibile momentan.",
+      "download": "Descarcă",
+      "categories": {
+        "codEtic": "Cod Etic",
+        "ghid": "Ghid",
+        "model": "Model",
+        "raport": "Raport",
+        "regulament": "Regulament"
+      }
+    },
+    "petitii": {
+      "title": "Petiții active",
+      "subtitle": "Semnează petițiile PFPSS în numele organizației tale",
+      "noPetitions": "Nu există petiții active momentan.",
+      "signed": "Semnată",
+      "sign": "Semnează petiția",
+      "alreadySigned": "Ai semnat deja această petiție",
+      "signError": "Eroare la semnare",
+      "signSuccess": "Petiție semnată!",
+      "petitions": {
+        "0": {
+          "title": "Scrisoare deschisă către Ministerul Muncii",
+          "description": "Controale orientate către om, nu către hârtii — simplificarea procedurilor de licențiere."
+        }
+      }
+    }
+  },
+  "common": {
+    "loading": "Se încarcă...",
+    "save": "Salvează",
+    "saving": "Se salvează...",
+    "cancel": "Anulează",
+    "delete": "Șterge",
+    "edit": "Editează",
+    "close": "Închide",
+    "back": "Înapoi",
+    "next": "Continuă",
+    "submit": "Trimite",
+    "search": "Caută",
+    "filter": "Filtrează",
+    "all": "Toate",
+    "none": "Niciunul",
+    "yes": "Da",
+    "no": "Nu"
+  },
+  "despre": {
+    "badge": "Despre PFPSS",
+    "hero": {
+      "title": "Unitate pentru demnitate — vocea furnizorilor privați de servicii sociale.",
+      "description": "PFPSS reunește profesioniștii din sectorul rezidențial privat de îngrijire a vârstnicilor din România. Prin advocacy, colaborare și educație sprijinim furnizorii în efortul de a oferi servicii la cele mai înalte standarde europene.",
+      "imageAlt": "Servicii de îngrijire a vârstnicilor"
+    },
+    "mission": {
+      "title": "Misiunea noastră",
+      "description": "Susținem activ furnizorii privați din domeniul asistenței sociale, oferindu-le o platformă de exprimare, resurse valoroase și oportunități de networking. Ne străduim să fim pilonul central pentru membrii noștri în interacțiunile cu autoritățile, agențiile guvernamentale și partenerii internaționali, pledând pentru un mediu legislativ optim și recunoașterea contribuției vitale a sectorului privat în asistența socială din România."
+    },
+    "vision": {
+      "title": "Viziunea noastră",
+      "description": "Ne imaginăm o Românie în care calitatea accesului la asistență socială este garantată pentru toți, indiferent de dificultățile întâmpinate. Prin unitate, inovare și angajament neîntrerupt, remodelăm peisajul asistenței sociale pentru a răspunde eficient și flexibil la nevoile reale ale comunității."
+    },
+    "directionsTitle": "Trei direcții care ghidează patronatul",
+    "directions": {
+      "0": {
+        "title": "Reprezentare",
+        "description": "Vocea sectorului privat în fața Ministerului Muncii, ANPC și a Parlamentului."
+      },
+      "1": {
+        "title": "Standarde",
+        "description": "Ghiduri de bune practici și un Cod Etic obligatoriu pentru toți membrii."
+      },
+      "2": {
+        "title": "Comunitate",
+        "description": "Întâlniri lunare, schimburi de experiență și parteneriate internaționale."
+      }
+    },
+    "valuesTitle": "Valorile noastre",
+    "values": {
+      "0": {
+        "title": "Excelență",
+        "description": "Promovăm cele mai înalte standarde de calitate în toate aspectele activității de îngrijire."
+      },
+      "1": {
+        "title": "Inovație",
+        "description": "Încurajăm gândirea creativă pentru a dezvolta soluții eficiente la provocările sociale."
+      },
+      "2": {
+        "title": "Integritate",
+        "description": "Acționăm cu onestitate, transparență și responsabilitate în toate inițiativele noastre."
+      },
+      "3": {
+        "title": "Colaborare",
+        "description": "Credem în forța parteneriatelor și a lucrului în echipă pentru obiective comune."
+      },
+      "4": {
+        "title": "Respect",
+        "description": "Tratăm cu demnitate beneficiarii, furnizorii și partenerii din întreg ecosistemul social."
+      }
+    },
+    "commitment": {
+      "title": "Angajamentul nostru",
+      "description1": "La PFPSS credem că demnitatea fiecărei persoane este un drept fundamental. Sub motto-ul „Unitate pentru Demnitate”, promovăm și protejăm acest principiu în toate activitățile noastre. Într-o lume în care provocările sociale devin tot mai complexe, unitatea dintre furnizori este cheia unui standard înalt de îngrijire pentru cei mai vulnerabili membri ai comunității.",
+      "description2": "Ne adresăm tuturor furnizorilor privați de servicii sociale care împărtășesc viziunea noastră despre un serviciu umanitar centrat pe demnitatea umană.",
+      "join": "Alăturați-vă PFPSS"
+    },
+    "documents": {
+      "title": "Documente publice",
+      "subtitle": "Tot ce ține de guvernanța și activitatea PFPSS, accesibil oricui — fără autentificare. Documentele detaliate pentru membri se găsesc în zona privată.",
+      "publicPositions": "Poziții publice",
+      "open": "Deschide",
+      "openLetter": {
+        "title": "Scrisoare deschisă către Ministerul Muncii — simplificarea licențierii (nr. 61/23.07.2026)",
+        "description": "Solicitare oficială privind continuarea simplificării procedurilor de licențiere și orientarea controalelor către protejarea efectivă a beneficiarilor, pe fondul scrisorii Comisarului pentru Drepturile Omului al Consiliului Europei."
+      },
+      "membersOnly": {
+        "title": "Documente doar pentru membri",
+        "description": "Modele detaliate de contracte, proceduri ISO, fișe de post, arhivă întâlniri, consultanță juridică și template-uri de răspuns la control sunt disponibile în zona privată.",
+        "login": "Autentificare membri"
+      }
+    },
+    "stats": {
+      "licensedHomes": "Cămine licențiate în România",
+      "licensedHomesDesc": "794 cămine · 34.310 locuri · 43 locuri/cămin · 42 județe",
+      "gapAnalysis": "Nevoia vs capacitatea națională",
+      "gapAnalysisDesc": "2,35M vârstnici 70+ vs 34.310 locuri · 1,46% acoperire"
+    },
+    "team": {
+      "badge": "Echipa",
+      "title": "Conducerea PFPSS",
+      "subtitle": "Boardul patronatului este format din reprezentanți aleși de Adunarea Generală a membrilor și sprijiniți de o echipă executivă dedicată.",
+      "description": "Boardul PFPSS este ales de Adunarea Generală a membrilor pentru un mandat de patru ani și răspunde public pentru direcția strategică a patronatului. Echipa executivă asigură implementarea zilnică și coordonarea proiectelor.",
+      "roles": {
+        "katia": "Advocacy & Reprezentare instituțională",
+        "georgeta": "Relația cu membrii & Standarde de calitate",
+        "loredana": "Parteneriate & Reprezentare națională/internațională",
+        "tania": "Comunicare publică & Relația cu presa"
+      },
+      "descriptions": {
+        "katia": "Conduce demersurile de advocacy și reprezentarea instituțională a furnizorilor privați în relația cu autoritățile publice.",
+        "georgeta": "Coordonează relația cu membrii și standardele de calitate aplicate în centrele rezidențiale.",
+        "loredana": "Responsabilă pentru dezvoltarea de parteneriate și reprezentarea PFPSS în forurile naționale și internaționale.",
+        "tania": "Coordonează comunicarea publică, relația cu presa și inițiativele de informare ale PFPSS."
+      }
+    },
+    "cta": {
+      "title": "Vocea ta contează în fața autorităților",
+      "description": "Alătură-te comunității PFPSS pentru reprezentare instituțională, consultanță juridică și acces la rețeaua de furnizori privați.",
+      "becomeMember": "Devino membru",
+      "contactTeam": "Vorbește cu echipa"
+    }
+  },
+  "membri": {
+    "badge": "Membri PFPSS",
+    "hero": {
+      "title": "Furnizori privați de servicii sociale, uniți pentru un standard comun.",
+      "description": "Membrii PFPSS sunt centre rezidențiale, organizații neguvernamentale și operatori privați acreditați care împărtășesc misiunea de a oferi îngrijire demnă vârstnicilor din România.",
+      "requestMembership": "Solicită aderarea",
+      "aboutPfpss": "Despre PFPSS",
+      "imageAlt": "Membri PFPSS"
+    },
+    "criteriaBadge": "Cerințe",
+    "criteriaTitle": "Criterii de aderare",
+    "criteriaDescription": "Pentru a deveni membru PFPSS, organizația trebuie să îndeplinească următoarele criterii. Procesul este transparent și se bazează exclusiv pe conformitatea cu standardele legale și profesionale.",
+    "criteria": {
+      "0": {
+        "title": "Acreditare conform Legii 197/2012",
+        "description": "Acreditare activă ca furnizor de servicii sociale, conform legislației în vigoare."
+      },
+      "1": {
+        "title": "Licență de funcționare",
+        "description": "Licență valabilă pentru cel puțin un serviciu social, emisă de autoritatea competentă."
+      },
+      "2": {
+        "title": "Standarde minime de calitate",
+        "description": "Respectarea standardelor minime de calitate aplicabile serviciilor sociale oferite."
+      },
+      "3": {
+        "title": "Cod Etic și Statut PFPSS",
+        "description": "Asumarea voluntară a Codului Etic și a Statutului patronatului prin semnătură."
+      },
+      "4": {
+        "title": "Cotizație anuală",
+        "description": "Achitarea cotizației anuale stabilite de Adunarea Generală a membrilor PFPSS."
+      }
+    },
+    "benefitsBadge": "Valoare",
+    "benefitsTitle": "Beneficiile calității de membru",
+    "benefitsDescription": "Membrii PFPSS beneficiază de un pachet integrat de servicii profesionale — de la reprezentare instituțională până la consultanță juridică și acces la o rețea națională de furnizori.",
+    "benefits": {
+      "0": {
+        "title": "Reprezentare instituțională",
+        "description": "Vocea ta în fața autorităților centrale și locale — minister, parlament, agenții."
+      },
+      "1": {
+        "title": "Consultanță juridică",
+        "description": "Asistență legală și sprijin în relația cu organismele de control și inspecție."
+      },
+      "2": {
+        "title": "Rețea națională de furnizori",
+        "description": "Acces la comunitatea de furnizori privați și la bune practici din tot sectorul."
+      },
+      "3": {
+        "title": "Grupuri de lucru & conferințe",
+        "description": "Participare la grupuri tematice, conferințe naționale și schimburi internaționale."
+      },
+      "4": {
+        "title": "Sprijin în acreditare & recertificare",
+        "description": "Ghidare prin procesul de acreditare, licențiere și recertificare periodică."
+      },
+      "5": {
+        "title": "Vizibilitate publică",
+        "description": "Promovare în campaniile de advocacy și comunicare publică ale patronatului."
+      }
+    },
+    "stepsBadge": "Proces",
+    "stepsTitle": "Patru pași până la calitatea de membru",
+    "stepsDescription": "De la cererea inițială până la activarea contului — un proces clar, transparent și eficient.",
+    "steps": {
+      "0": {
+        "title": "Trimite cererea",
+        "description": "Completezi formularul online cu datele organizației tale. Nu durează mai mult de 5 minute."
+      },
+      "1": {
+        "title": "Validare dosar",
+        "description": "Echipa PFPSS verifică acreditarea, licențele active și conformitatea cu criteriile."
+      },
+      "2": {
+        "title": "Aprobare Board",
+        "description": "Cererea este analizată și votată în următoarea ședință a boardului PFPSS."
+      },
+      "3": {
+        "title": "Activare cont",
+        "description": "Primești accesul la rețea, consultanță juridică, grupurile de lucru și resursele private."
+      }
+    },
+    "ctaBadge": "Alătură-te",
+    "ctaTitle": "Sunteți furnizor privat de servicii sociale?",
+    "ctaDescription": "Alăturați-vă PFPSS pentru a beneficia de reprezentare instituțională, consultanță juridică și acces la resurse profesionale. Echipa noastră vă va contacta în maximum 48 de ore lucrătoare.",
+    "ctaRequestMembership": "Solicită aderarea",
+    "ctaQuestions": "Ai întrebări?"
+  },
+  "contact": {
+    "badge": "Contact PFPSS",
+    "hero": {
+      "title": "Vorbește cu echipa PFPSS",
+      "description": "Indiferent dacă sunteți furnizor de servicii sociale interesat să ni se alăture, beneficiar în căutare de informații sau partener instituțional, echipa noastră este pregătită să răspundă."
+    },
+    "infoBadge": "Date de contact",
+    "info": {
+      "phone": "Telefon",
+      "email": "Email",
+      "hours": "Program",
+      "hoursValue": "Luni – Vineri · 09:00 – 17:00"
+    },
+    "form": {
+      "title": "Trimite-ne un mesaj",
+      "description": "Vom reveni cu un răspuns cât mai curând posibil. Pentru solicitări urgente, vă rugăm să folosiți telefonul.",
+      "name": "Nume",
+      "namePlaceholder": "Numele tău",
+      "email": "Email",
+      "emailPlaceholder": "email@exemplu.ro",
+      "phone": "Telefon",
+      "phonePlaceholder": "07xx xxx xxx",
+      "subject": "Subiect",
+      "selectSubject": "Selectează...",
+      "subjects": {
+        "membership": "Doresc să devin membru",
+        "legal": "Consultanță juridică",
+        "press": "Pentru presă",
+        "partnership": "Parteneriat",
+        "other": "Altele"
+      },
+      "message": "Mesaj",
+      "messagePlaceholder": "Scrie mesajul tău aici...",
+      "submit": "Trimite mesajul",
+      "success": "Mesaj trimis!",
+      "successDesc": "Vom reveni cu un răspuns în maximum 48 de ore lucrătoare.",
+      "privacyPrefix": "Prin trimiterea acestui formular ești de acord cu",
+      "privacyLink": "Politica de confidențialitate"
+    },
+    "faqTitle": "Întrebări frecvente",
+    "faqs": {
+      "0": {
+        "question": "În cât timp primesc răspuns?",
+        "answer": "Echipa PFPSS răspunde în maximum 48 de ore lucrătoare la toate solicitările primite prin formularul online sau email. Pentru chestiuni urgente, vă recomandăm să ne contactați telefonic."
+      },
+      "1": {
+        "question": "Pot solicita o întâlnire la sediu?",
+        "answer": "Da. Pentru a programa o întâlnire la sediul PFPSS, vă rugăm să trimiteți o solicitare prin formularul de contact sau la office@pfpss.ro, indicând subiectul dorit și intervalul preferat."
+      },
+      "2": {
+        "question": "Cui mă adresez pentru presă?",
+        "answer": "Pentru solicitări din partea presei și a jurnaliștilor, vă rugăm să scrieți la office@pfpss.ro sau să sunați la 0732 009 000, menționând clar 'Pentru presă' în subiectul mesajului."
+      }
+    },
+    "exploreTitle": "Explorează mai departe",
+    "exploreMore": "Explorează",
+    "explore": {
+      "0": {
+        "title": "Membri",
+        "subtitle": "Rețeaua națională PFPSS",
+        "description": "Criterii, beneficii și cum poți deveni membru."
+      },
+      "1": {
+        "title": "Advocacy",
+        "subtitle": "Campanii publice și petiții",
+        "description": "Pozițiile oficiale și inițiativele prin care apărăm sectorul."
+      },
+      "2": {
+        "title": "Legislație",
+        "subtitle": "Bibliotecă de acte normative",
+        "description": "Cadrul legal aplicabil furnizorilor privați, actualizat."
+      }
+    }
+  },
+  "advocacy": {
+    "badge": "Advocacy & petiții",
+    "hero": {
+      "title": "Acțiuni publice pentru un sistem social demn.",
+      "description": "PFPSS coordonează campanii, petiții și poziții oficiale prin care apără interesele furnizorilor privați și ale beneficiarilor."
+    },
+    "processTitle": "De la dosarul tehnic la decizia publică",
+    "processDescription": "Fiecare campanie pornește dintr-o nevoie reală a membrilor: o analiză legislativă, o consultare cu specialiștii, o poziție oficială și, când este nevoie, o petiție publică sau o acțiune în instanță.",
+    "details": "Detalii",
+    "comingSoon": "Detalii în curând",
+    "campaigns": {
+      "0": {
+        "badge": "Iulie 2026",
+        "title": "Scrisoare deschisă către Ministerul Muncii: licențiere simplă, controale orientate către om",
+        "description": "Solicitare oficială (nr. 61/23.07.2026) pentru continuarea simplificării licențierii, finanțare neutră față de forma juridică și inspecții centrate pe drepturile beneficiarilor.",
+        "href": "/stiri/scrisoare-deschisa-ministerul-muncii-iulie-2026",
+        "external": "false"
+      },
+      "1": {
+        "badge": "Petiție publică",
+        "title": "STOP abuzurilor statului asupra centrelor rezidențiale de bătrâni",
+        "description": "Cerem Guvernului revizuirea reglementărilor care afectează negativ centrele rezidențiale private.",
+        "href": "https://www.petitieonline.com/stop_abuzurilor_statului_asupra_centrelor_rezidentiale_de_btrani",
+        "external": "true"
+      },
+      "2": {
+        "badge": "Propunere",
+        "title": "Indexarea costului standard per beneficiar cu inflația",
+        "description": "Sustenabilitatea financiară a serviciilor depinde de o finanțare corelată cu realitatea economică.",
+        "href": "",
+        "external": "false"
+      },
+      "3": {
+        "badge": "2023",
+        "title": "Simplificarea procedurilor de acreditare 2023",
+        "description": "Reducerea birocrației pentru centrele mici și mijlocii în urma dialogului cu Ministerul Muncii.",
+        "href": "",
+        "external": "false"
+      }
+    },
+    "exploreTitle": "Explorează mai departe",
+    "exploreMore": "Explorează",
+    "explore": {
+      "0": {
+        "title": "Legislație",
+        "subtitle": "Bibliotecă de acte normative",
+        "description": "Cadrul legal aplicabil furnizorilor privați, actualizat.",
+        "href": "/resurse"
+      },
+      "1": {
+        "title": "Membri",
+        "subtitle": "Rețeaua națională PFPSS",
+        "description": "Criterii, beneficii și cum poți deveni membru.",
+        "href": "/membri"
+      },
+      "2": {
+        "title": "Contact",
+        "subtitle": "Vorbește cu echipa",
+        "description": "Telefon, email și formular pentru orice solicitare.",
+        "href": "/contact"
+      }
+    },
+    "ctaTitle": "Vocea ta contează în fața autorităților",
+    "ctaDescription": "Alătură-te comunității PFPSS pentru reprezentare instituțională, consultanță juridică și acces la rețeaua de furnizori privați.",
+    "ctaBecomeMember": "Devino membru",
+    "ctaContactTeam": "Vorbește cu echipa"
+  },
+  "resurse": {
+    "badge": "Resurse PFPSS",
+    "hero": {
+      "title": "Bibliotecă legislativă pentru furnizorii privați.",
+      "description": "Cadrul normativ, mereu actualizat. Legislație relevantă, documente publice de guvernanță și resurse pentru membri."
+    },
+    "legislationTitle": "Cadrul normativ, mereu actualizat",
+    "legislationDescription": "Toate actele normative relevante pentru furnizorii privați de servicii sociale, cu linkuri către textul oficial.",
+    "publicDocsTitle": "Documente publice",
+    "publicDocsDescription": "Tot ce ține de guvernanța și activitatea PFPSS, accesibil oricui — fără autentificare.",
+    "publicPositions": "Poziții publice",
+    "open": "Deschide",
+    "publicDocs": {
+      "0": {
+        "title": "Scrisoare deschisă către Ministerul Muncii — simplificarea licențierii (nr. 61/23.07.2026)",
+        "description": "Solicitare oficială privind continuarea simplificării procedurilor de licențiere și orientarea controalelor către protejarea efectivă a beneficiarilor, pe fondul scrisorii Comisarului pentru Drepturile Omului al Consiliului Europei."
+      }
+    },
+    "membersOnly": {
+      "title": "Documente doar pentru membri",
+      "description": "Modele detaliate de contracte, proceduri ISO, fișe de post, arhivă întâlniri, consultanță juridică și template-uri de răspuns la control sunt disponibile în zona privată.",
+      "login": "Autentificare membri"
+    },
+    "exploreTitle": "Explorează mai departe",
+    "exploreMore": "Explorează",
+    "explore": {
+      "0": {
+        "title": "Advocacy",
+        "subtitle": "Campanii și poziții",
+        "description": "Cum reprezentăm sectorul în fața autorităților.",
+        "href": "/advocacy"
+      },
+      "1": {
+        "title": "Membri",
+        "subtitle": "Rețeaua națională",
+        "description": "Criterii, beneficii și cum poți deveni membru.",
+        "href": "/membri"
+      },
+      "2": {
+        "title": "Petiții",
+        "subtitle": "Semnează oficial",
+        "description": "Petiții active pentru modificări legislative.",
+        "href": "/petitii"
+      }
+    },
+    "ctaTitle": "Vocea ta contează în fața autorităților",
+    "ctaDescription": "Alătură-te comunității PFPSS pentru reprezentare instituțională, consultanță juridică și acces la rețeaua de furnizori privați.",
+    "ctaBecomeMember": "Devino membru",
+    "ctaContactTeam": "Vorbește cu echipa"
+  },
+  "petitii": {
+    "badge": "Petiții PFPSS",
+    "hero": {
+      "title": "Vocea furnizorilor privați de servicii sociale",
+      "description": "Poziții publice pe care organizațiile membre și furnizorii licențiați le pot susține instituțional prin semnătură validată — o singură semnătură per CUI, confirmată prin email."
+    },
+    "howTitle": "Cum funcționează",
+    "howDescription": "Fiecare petiție este un demers oficial. Semnătura ta este validată instituțional pentru a asigura greutate juridică reală în fața autorităților.",
+    "steps": {
+      "0": {
+        "title": "Citește petiția",
+        "description": "Revizuiește textul oficial, referințele legale și modificările propuse."
+      },
+      "1": {
+        "title": "Validează semnătura",
+        "description": "O singură semnătură per CUI, confirmată prin email pentru validitate instituțională."
+      },
+      "2": {
+        "title": "Semnează public",
+        "description": "Semnătura ta devine parte din demersul oficial transmis autorităților competente."
+      }
+    },
+    "activeTitle": "Petiții active",
+    "petitionNumber": "Petiție #{number}",
+    "viewAndSign": "Vezi și semnează",
+    "infoBanner": "Semnătura este valabilă doar pentru organizații și furnizori licențiați. Fiecare semnătură este verificată prin CUI și confirmată prin email pentru a asigura demersului greutate instituțională reală.",
+    "petitions": {
+      "0": {
+        "title": "Eliminarea autorizației ISU dintre documentele obligatorii pentru licențierea serviciilor sociale rezidențiale",
+        "description": "Petiția operatorilor de servicii sociale rezidențiale din România — cămine pentru persoane vârstnice și centre pentru persoane adulte cu dizabilități — pentru modificarea art. 12 alin. (2) lit. k) din Legea nr. 197/2012.",
+        "status": "Activă"
+      }
+    },
+    "ctaTitle": "Propune o petiție",
+    "ctaDescription": "Ai identificat o problemă legislativă sau administrativă care afectează furnizorii privați de servicii sociale? Scrie-ne, iar echipa juridică PFPSS va evalua oportunitatea unei noi petiții oficiale.",
+    "ctaContact": "Contactează echipa",
+    "ctaAllCampaigns": "Vezi toate campaniile"
+  },
+  "camine": {
+    "breadcrumb": {
+      "home": "Acasă",
+      "current": "Director cămine"
+    },
+    "badge": "Director național",
+    "hero": {
+      "title": "Directorul căminelor de bătrâni din România",
+      "description": "{total} cămine indexate la nivel național — cu date de contact, locație, status de licențiere și capacitate."
+    },
+    "stats": {
+      "total": "Total cămine",
+      "licensed": "Licențiate",
+      "withPhone": "Cu telefon",
+      "counties": "Județe"
+    },
+    "searchPlaceholder": "Caută după nume, localitate, adresă...",
+    "allCounties": "Toate județele",
+    "licensedOnly": "Doar licențiate",
+    "withPhone": "Cu telefon",
+    "resultsCount": "{count} rezultate",
+    "resetFilters": "Resetează filtre",
+    "noResults": "Niciun rezultat găsit.",
+    "capacity": "{count} locuri",
+    "phone": "Telefon",
+    "website": "Website",
+    "directions": "Direcții",
+    "previous": "Anterior",
+    "next": "Următor"
+  },
+  "camineAutorizate": {
+    "title": "Cămine pentru persoane vârstnice licențiate",
+    "source": "Sursa: Ministerul Muncii, Familiei, Tineretului și Solidarității Sociale · Data: 10.03.2026",
+    "stats": {
+      "total": "Total",
+      "private": "Private",
+      "public": "Publice",
+      "counties": "Județe"
+    },
+    "searchPlaceholder": "Caută nume, furnizor, adresă...",
+    "allCounties": "Toate județele",
+    "allTypes": "Toate tipurile",
+    "types": {
+      "private": "Private",
+      "public": "Publice"
+    },
+    "reset": "Reset",
+    "resultsCount": "{count} cămine afișate",
+    "columns": {
+      "type": "Tip",
+      "provider": "Furnizor",
+      "service": "Serviciu",
+      "county": "Județ",
+      "locality": "Localitate",
+      "address": "Adresă",
+      "capacity": "Capacitate",
+      "licenseFrom": "Licență din",
+      "licenseNumber": "Nr. licență"
+    },
+    "footer": "Date extrase din PDF oficial MMJS · {total} cămine licențiate la 10.03.2026"
+  },
+  "stiri": {
+    "badge": "Știri & Comunicate",
+    "hero": {
+      "title": "Știri, comunicate și poziții publice.",
+      "description": "Comunicate, analize și acțiuni publice PFPSS pentru sectorul rezidențial privat de îngrijire a vârstnicilor."
+    },
+    "featured": "Featured",
+    "readArticle": "Citește articolul",
+    "allArticles": "Toate articolele",
+    "read": "Citește",
+    "exploreTitle": "Explorează mai departe",
+    "exploreMore": "Explorează",
+    "explore": {
+      "0": {
+        "title": "Advocacy",
+        "subtitle": "Campanii și poziții",
+        "description": "Cum reprezentăm sectorul în fața autorităților.",
+        "href": "/advocacy"
+      },
+      "1": {
+        "title": "Petiții",
+        "subtitle": "Semnează oficial",
+        "description": "Petiții active pentru modificări legislative.",
+        "href": "/petitii"
+      },
+      "2": {
+        "title": "Resurse",
+        "subtitle": "Bibliotecă legislativă",
+        "description": "Cadrul legal aplicabil furnizorilor privați.",
+        "href": "/resurse"
+      }
+    },
+    "ctaTitle": "Vocea ta contează în fața autorităților",
+    "ctaDescription": "Alătură-te comunității PFPSS pentru reprezentare instituțională, consultanță juridică și acces la rețeaua de furnizori privați.",
+    "ctaBecomeMember": "Devino membru",
+    "ctaContactTeam": "Vorbește cu echipa"
+  },
+  "admin": {
+    "title": "Administrare",
+    "subtitle": "Gestionează cererile de aderare și membrii PFPSS",
+    "tabs": {
+      "pending": "În așteptare",
+      "approved": "Aprobate",
+      "all": "Toate"
+    },
+    "status": {
+      "pending": "În așteptare",
+      "approved": "Aprobat",
+      "rejected": "Respins"
+    },
+    "noRequests": "Nu există cereri în această categorie.",
+    "cuiLabel": "CUI",
+    "contactPerson": "Persoană contact",
+    "email": "Email",
+    "phone": "Telefon",
+    "licenseLabel": "Licență",
+    "approve": "Aprobă",
+    "reject": "Respinge",
+    "approveError": "Eroare la aprobare",
+    "approveSuccess": "Cerere aprobată!",
+    "rejectError": "Eroare la respingere",
+    "rejectSuccess": "Cerere respinsă"
+  },
+  "camineDetail": {
+    "notFound": "Cămin negăsit",
+    "backToDirector": "Înapoi la director",
+    "backToDirectorFull": "Înapoi la directorul căminelor",
+    "breadcrumb": {
+      "home": "Acasă",
+      "director": "Director cămine"
+    },
+    "county": "Județul",
+    "licensed": "Licențiat",
+    "reviews": "{count} recenzii",
+    "capacity": "{count} locuri",
+    "contactInfo": "Date de contact",
+    "phone": "Telefon",
+    "website": "Website",
+    "address": "Adresă",
+    "directions": "Direcții pe Google Maps",
+    "licenseStatus": "Status licențiere",
+    "cui": "CUI",
+    "licenseNumber": "Nr. licență",
+    "licenseDate": "Data licențierii",
+    "capacityLabel": "Capacitate",
+    "licenseSource": "Date conform listei oficiale a Ministerului Muncii, Familiei, Tineretului și Solidarității Sociale.",
+    "mapTitle": "Hartă",
+    "contactCta": {
+      "title": "Contactează acest cămin",
+      "description": "Sună direct pentru informații despre locuri disponibile, tarife și condiții de cazare."
+    },
+    "visitWebsite": "Vizitează website",
+    "mapDirections": "Direcții pe hartă",
+    "contactPfpss": "Contact PFPSS",
+    "related": "Alte cămine în {judet}",
+    "seeAllIn": "Vezi toate din {judet}"
+  },
+  "stiriDetail": {
+    "notFound": "Articolul nu a fost găsit",
+    "backToNews": "Înapoi la știri",
+    "breadcrumb": {
+      "home": "Acasă",
+      "news": "Știri"
+    },
+    "downloadPdf": "Descarcă documentul integral (PDF)",
+    "downloadPdfButton": "Descarcă PDF",
+    "petitionNote": "Acțiunea continuă demersurile PFPSS pentru un cadru de licențiere echitabil — inclusiv petiția privind eliminarea autorizației ISU dintre documentele obligatorii pentru licențiere.",
+    "signPetition": "Semnează petiția ISU",
+    "relatedArticles": "Articole conexe"
+  }
+}

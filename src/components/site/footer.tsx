@@ -1,25 +1,27 @@
+import { Phone, Mail, MapPin } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin } from "lucide-react";
-
-const footerLinks = {
-  Navigare: [
-    { href: "/despre", label: "Despre noi" },
-    { href: "/advocacy", label: "Advocacy" },
-    { href: "/petitii", label: "Petiții" },
-    { href: "/resurse", label: "Resurse" },
-    { href: "/stiri", label: "Știri" },
-    { href: "/inscriere", label: "Devino membru" },
-    { href: "/contact", label: "Contact" },
-  ],
-  Legal: [
-    { href: "/confidentialitate", label: "Confidențialitate" },
-    { href: "/termeni", label: "Termeni" },
-    { href: "/cookies", label: "Cookies" },
-  ],
-};
 
 export function SiteFooter() {
+  const t = useTranslations("footer");
+
+  const navLinks = [
+    { href: "/despre", label: t("nav.aboutUs") },
+    { href: "/advocacy", label: t("nav.advocacy") },
+    { href: "/petitii", label: t("nav.petitions") },
+    { href: "/resurse", label: t("nav.resources") },
+    { href: "/stiri", label: t("nav.news") },
+    { href: "/inscriere", label: t("nav.becomeMember") },
+    { href: "/contact", label: t("nav.contact") },
+  ];
+
+  const legalLinks = [
+    { href: "/confidentialitate", label: t("nav.privacy") },
+    { href: "/termeni", label: t("nav.terms") },
+    { href: "/cookies", label: t("nav.cookies") },
+  ];
+
   return (
     <footer className="pt-20 pb-10 bg-paper border-t border-navy-deep/10 text-navy-deep">
       <div className="max-w-7xl mx-auto px-6">
@@ -29,33 +31,27 @@ export function SiteFooter() {
             <div className="mb-6">
               <Image
                 src="/logo-pfpss.png"
-                alt="PFPSS — Patronatul Furnizorilor Privați de Servicii Sociale"
+                alt="PFPSS"
                 width={200}
                 height={58}
                 className="h-12 w-auto mb-3"
               />
             </div>
             <p className="text-sm text-navy-deep/70 leading-relaxed max-w-md">
-              Patronatul Furnizorilor Privați de Servicii Sociale din România
-              este organizația reprezentativă a sectorului rezidențial privat de
-              îngrijire a vârstnicilor.
+              {t("description")}
             </p>
             <dl className="mt-6 text-xs text-navy-deep/60 space-y-1">
               <div className="flex gap-2">
-                <dt className="font-semibold">Denumire:</dt>
+                <dt className="font-semibold">{t("legal.name")}</dt>
                 <dd>Patronatul Furnizorilor Privați de Servicii Sociale</dd>
               </div>
               <div className="flex gap-2">
-                <dt className="font-semibold">CUI:</dt>
+                <dt className="font-semibold">{t("legal.cui")}</dt>
                 <dd>50457026</dd>
               </div>
               <div className="flex gap-2">
-                <dt className="font-semibold">Sediu:</dt>
-                <dd>
-                  Phoenicia Business Center, Corp A, interfon 14, Str.
-                  Turturelelor 11b, bl. A, sc. A, et. 1, ap. a14, Sector 3,
-                  București
-                </dd>
+                <dt className="font-semibold">{t("legal.address")}</dt>
+                <dd>{t("legal.addressValue")}</dd>
               </div>
             </dl>
           </div>
@@ -63,7 +59,7 @@ export function SiteFooter() {
           {/* Contact */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest mb-6">
-              Contact
+              {t("sections.contact")}
             </h4>
             <ul className="space-y-4 text-sm">
               <li className="flex gap-3 items-start">
@@ -97,10 +93,10 @@ export function SiteFooter() {
           {/* Links */}
           <div>
             <h4 className="text-xs font-bold uppercase tracking-widest mb-6">
-              Navigare
+              {t("sections.navigation")}
             </h4>
             <ul className="space-y-3 text-sm">
-              {footerLinks.Navigare.map((link) => (
+              {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
@@ -117,7 +113,7 @@ export function SiteFooter() {
         {/* ANPC + bottom bar */}
         <div className="border-t border-navy-deep/10 pt-6 mb-6 flex flex-wrap items-center gap-x-6 gap-y-4">
           <span className="text-xs font-semibold uppercase tracking-widest text-navy-deep/70">
-            Soluționarea litigiilor:
+            {t("legal.disputeResolution")}
           </span>
           <a
             href="https://anpc.ro/ce-este-sal/"
@@ -144,7 +140,7 @@ export function SiteFooter() {
             ANPC
           </a>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-navy-deep/60 sm:ml-auto">
-            {footerLinks.Legal.map((link) => (
+            {legalLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -158,7 +154,7 @@ export function SiteFooter() {
 
         <div className="pt-6 border-t border-navy-deep/10 text-center">
           <span className="text-xs text-navy-deep/50">
-            © {new Date().getFullYear()} PFPSS. Toate drepturile rezervate.
+            {t("copyright", { year: new Date().getFullYear() })}
           </span>
         </div>
       </div>

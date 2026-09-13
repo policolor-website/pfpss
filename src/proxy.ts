@@ -1,9 +1,19 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { createServerClient } from "@supabase/ssr";
+import createIntlMiddleware from "next-intl/middleware";
+import { routing } from "@/i18n/routing";
+
+// next-intl middleware — handles locale detection + redirects + rewrites
+const intlMiddleware = createIntlMiddleware(routing);
 
 export async function proxy(request: NextRequest) {
-  let supabaseResponse = NextResponse.next({ request });
+  // 1. Run next-intl middleware first — this returns a response that
+  //    may contain an internal rewrite (e.g. / → /ro) or a redirect.
+  //    We MUST use this response as the base, not create a new one.
+  const response = intlMiddleware(request);
 
+  // 2. Supabase auth — refresh session + protect routes
+  //    We use the intl response as the base so the rewrite is preserved.
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
@@ -13,12 +23,8 @@ export async function proxy(request: NextRequest) {
           return request.cookies.getAll();
         },
         setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value }) =>
-            request.cookies.set(name, value)
-          );
-          supabaseResponse = NextResponse.next({ request });
           cookiesToSet.forEach(({ name, value, options }) =>
-            supabaseResponse.cookies.set(name, value, options)
+            response.cookies.set(name, value, options)
           );
         },
       },
@@ -29,19 +35,24 @@ export async function proxy(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
+  // Extract pathname without locale prefix for route matching
   const { pathname } = request.nextUrl;
+  const pathnameWithoutLocale = pathname.replace(/^\/(en|ro)/, "") || "/";
 
-  // Rute protejate
-  if (pathname.startsWith("/dashboard") || pathname.startsWith("/admin")) {
+  // Protected routes
+  if (
+    pathnameWithoutLocale.startsWith("/dashboard") ||
+    pathnameWithoutLocale.startsWith("/admin")
+  ) {
     if (!user) {
       const url = request.nextUrl.clone();
       url.pathname = "/login";
-      url.searchParams.set("redirect", pathname);
+      url.searchParams.set("redirect", pathnameWithoutLocale);
       return NextResponse.redirect(url);
     }
 
-    // Admin — verifică rolul
-    if (pathname.startsWith("/admin")) {
+    // Admin — check role
+    if (pathnameWithoutLocale.startsWith("/admin")) {
       const { data: profile } = await supabase
         .from("profiles")
         .select("role")
@@ -54,9 +65,11 @@ export async function proxy(request: NextRequest) {
     }
   }
 
-  return supabaseResponse;
+  return response;
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)"],
+  matcher: [
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|mp4|webm|mov|avi|mp3|wav|pdf|doc|docx|xls|xlsx|zip)$).*)",
+  ],
 };

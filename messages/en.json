@@ -1,0 +1,939 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "members": "Members",
+      "advocacy": "Advocacy",
+      "resources": "Resources",
+      "news": "News",
+      "careHomes": "Care Homes",
+      "petitions": "Petitions",
+      "contact": "Contact"
+    },
+    "actions": {
+      "loginMembers": "Member login",
+      "becomeMember": "Become a member",
+      "menu": "Menu"
+    },
+    "lang": {
+      "romanian": "Română",
+      "english": "English"
+    }
+  },
+  "footer": {
+    "description": "The Patronat of Private Social Service Providers in Romania is the representative organization of the private residential eldercare sector.",
+    "sections": {
+      "contact": "Contact",
+      "navigation": "Navigation"
+    },
+    "nav": {
+      "aboutUs": "About us",
+      "advocacy": "Advocacy",
+      "petitions": "Petitions",
+      "resources": "Resources",
+      "news": "News",
+      "becomeMember": "Become a member",
+      "contact": "Contact",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "cookies": "Cookies"
+    },
+    "legal": {
+      "name": "Name:",
+      "cui": "Tax ID:",
+      "address": "Address:",
+      "addressValue": "Phoenicia Business Center, Corp A, interfon 14, Str. Turturelelor 11b, bl. A, sc. A, et. 1, ap. a14, Sector 3, Bucharest",
+      "disputeResolution": "Dispute resolution:"
+    },
+    "copyright": "© {year} PFPSS. All rights reserved."
+  },
+  "home": {
+    "badge": "Patronat of Private Social Service Providers in Romania",
+    "hero": {
+      "title1": "We represent",
+      "title1Suffix": "care homes.",
+      "title2": "We transform",
+      "title2Suffix": "the system.",
+      "description": "We represent private social service providers in dialogue with public authorities, ensuring a sustainable and dignified legislative framework for residential care centers.",
+      "becomeMember": "Become a member",
+      "aboutPatronat": "About the patronat",
+      "activeMembers": "Active members represented nationwide"
+    },
+    "openLetter": {
+      "badge": "Open letter to the Ministry of Labour",
+      "text": "PFPSS has officially submitted to the Minister of Labour a request to continue simplifying licensing and to orient inspections toward effectively protecting beneficiaries — not paperwork. The initiative is supported by the letter from the Council of Europe Commissioner for Human Rights.",
+      "readLetter": "Read the letter"
+    },
+    "dignity": {
+      "title": "Dignity, professionalism and predictability for every beneficiary",
+      "description": "Private residential centers currently cover a deficit that the state alone cannot sustain. PFPSS advocates for a real public-private partnership, where elderly people benefit from safe, transparent and equitably funded services.",
+      "aboutPatronat": "About the patronat"
+    },
+    "careHomes": {
+      "title": "Licensed care homes in Romania",
+      "description": "Official list of care homes for elderly persons licensed by the Ministry of Labour, Family, Youth and Social Solidarity · Updated data 2026",
+      "privateVsPublic": "Private vs Public",
+      "privateVsPublicDesc": "Distribution of licensed care homes by provider type",
+      "capacityDist": "Capacity distribution",
+      "capacityDistDesc": "Number of care homes grouped by bed capacity",
+      "viewFullList": "View full list"
+    },
+    "axes": {
+      "title": "Three working axes for a dignified care system",
+      "advocacy": {
+        "title": "Legislative advocacy",
+        "description": "We monitor the legal framework, conduct institutional dialogue and draft relevant legal opinions for legislative changes — for a fair and predictable environment for private providers."
+      },
+      "standards": {
+        "title": "Quality standards",
+        "description": "We develop best practice guides and internal certifications that exceed the minimum standards imposed by the state."
+      },
+      "representation": {
+        "title": "Institutional representation",
+        "description": "We facilitate dialogue between the private sector and the Ministry of Labour to improve the social assistance system."
+      }
+    },
+    "news": {
+      "title": "Public positions & News",
+      "subtitle": "Latest articles and official positions of PFPSS",
+      "viewArchive": "View full archive"
+    },
+    "sector": {
+      "title": "The state of the sector in figures",
+      "subtitle": "Updated data on private eldercare homes in Romania",
+      "homeStatus": "Care home status",
+      "homeStatusDesc": "Total: 1,142 private care homes in Romania",
+      "licensingEvolution": "Licensing evolution",
+      "licensingEvolutionDesc": "Licenses issued vs. revoked (2022–2026)",
+      "pfpssActivity": "PFPSS activity",
+      "pfpssActivityDesc": "Monthly actions: petitions, letters, meetings",
+      "petitions": "Petitions",
+      "officialLetters": "Official letters",
+      "meetings": "Meetings"
+    },
+    "cta": {
+      "title": "Your voice matters to the authorities",
+      "description": "Join the PFPSS community for legal counsel, institutional representation and access to our provider network.",
+      "becomeMemberToday": "Become a member today"
+    }
+  },
+  "login": {
+    "title": "Member login",
+    "subtitle": "Access the PFPSS portal",
+    "email": "Email",
+    "emailPlaceholder": "email@organization.ro",
+    "password": "Password",
+    "passwordPlaceholder": "••••••••",
+    "submit": "Sign in",
+    "submitting": "Signing in...",
+    "success": "Welcome back!",
+    "notMember": "Not a member yet?",
+    "requestAccess": "Request membership",
+    "registered": {
+      "title": "Application submitted!",
+      "description": "Confirm your email address, then you can sign in. The PFPSS team will validate your request within 48h."
+    }
+  },
+  "inscriere": {
+    "title": "Request membership",
+    "subtitle": "Fill in the form with your organization's details. The PFPSS team will validate your request within 48 working hours.",
+    "backToMembers": "Back to members",
+    "select": "Select",
+    "password": "Password",
+    "passwordPlaceholder": "Min. 6 characters",
+    "confirmPassword": "Confirm password",
+    "confirmPasswordPlaceholder": "Repeat password",
+    "passwordsMismatch": "Passwords do not match",
+    "haveAccount": "Already have an account?",
+    "login": "Sign in",
+    "steps": {
+      "account": "Account",
+      "organization": "Organization",
+      "licenses": "Licenses"
+    },
+    "account": {
+      "title": "Create your account",
+      "description": "You will use these credentials to sign in to the member portal."
+    },
+    "org": {
+      "title": "Organization details",
+      "description": "Organization description",
+      "email": "Email",
+      "emailPlaceholder": "email@organization.ro",
+      "legalName": "Legal name",
+      "legalNamePlaceholder": "e.g. Căminul Speranța SRL",
+      "cui": "Tax ID (CUI)",
+      "cuiPlaceholder": "RO12345678",
+      "regNumber": "Reg. number",
+      "regNumberPlaceholder": "J40/1234/2020",
+      "legalForm": "Legal form",
+      "contactName": "Contact person",
+      "contactNamePlaceholder": "Full name",
+      "contactEmail": "Contact email",
+      "contactEmailPlaceholder": "email@organization.ro",
+      "contactPhone": "Contact phone",
+      "contactPhonePlaceholder": "07XX XXX XXX",
+      "county": "County",
+      "city": "City",
+      "cityPlaceholder": "City",
+      "address": "Address",
+      "addressPlaceholder": "Street, no.",
+      "serviceType": "Service type",
+      "descriptionPlaceholder": "Brief description of the organization and services offered..."
+    },
+    "licenses": {
+      "title": "Licenses and accreditations",
+      "description": "Details about the operating license and accreditation.",
+      "number": "License no.",
+      "numberPlaceholder": "e.g. LF-1234/2024",
+      "expiry": "Expires on",
+      "accreditation": "Accreditation no.",
+      "accreditationPlaceholder": "e.g. AC-5678/2023",
+      "capacity": "Capacity (beds)",
+      "capacityPlaceholder": "e.g. 50"
+    },
+    "actions": {
+      "next": "Continue",
+      "back": "Back",
+      "submit": "Submit application",
+      "submitting": "Sending..."
+    },
+    "success": {
+      "title": "Application submitted! Check your email to confirm."
+    },
+    "errors": {
+      "requiredFields": "Please fill in all required fields",
+      "accountFailed": "Could not create account",
+      "submitFailed": "An error occurred. Please try again."
+    }
+  },
+  "dashboard": {
+    "portal": "Member portal",
+    "organization": "Organization",
+    "publicSite": "Public site",
+    "logout": "Log out",
+    "nav": {
+      "overview": "Overview",
+      "profile": "Organization profile",
+      "fee": "Membership fee",
+      "documents": "Documents",
+      "petitions": "Petitions"
+    },
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "suspended": "Suspended"
+    },
+    "overview": {
+      "welcome": "Welcome{name}",
+      "subtitle": "Your organization's control panel in PFPSS",
+      "pendingTitle": "Membership application is under review",
+      "pendingDesc": "The PFPSS team is reviewing your file. You will receive an email upon approval, usually within 48 working hours.",
+      "rejectedTitle": "Application rejected",
+      "rejectedDesc": "Contact PFPSS for details and next steps.",
+      "memberStatus": "Member status",
+      "feePaid": "Paid",
+      "feeUnpaid": "Unpaid",
+      "currentMonthFee": "Current month fee",
+      "feePaidLabel": "Paid",
+      "feeToPay": "To pay",
+      "county": "County",
+      "memberSince": "Member since",
+      "recentDocs": "Recent documents",
+      "viewAll": "View all",
+      "docsAfterApproval": "Documents are available after your application is approved.",
+      "noDocsYet": "No documents yet.",
+      "orgInfo": "Organization info",
+      "orgName": "Name",
+      "serviceType": "Service type",
+      "editProfile": "Edit profile"
+    },
+    "profile": {
+      "title": "Organization profile",
+      "subtitle": "Update your organization's details",
+      "legalName": "Legal name",
+      "cui": "Tax ID (CUI)",
+      "regNumber": "Registration no.",
+      "legalForm": "Legal form",
+      "contactName": "Contact person",
+      "contactEmail": "Contact email",
+      "phone": "Phone",
+      "website": "Website",
+      "county": "County",
+      "city": "City",
+      "address": "Address",
+      "licenseNumber": "License no.",
+      "licenseExpiry": "Expires on",
+      "accreditationNumber": "Accreditation no.",
+      "capacity": "Capacity (places)",
+      "description": "Description",
+      "select": "Select",
+      "save": "Save changes",
+      "saveError": "Error saving",
+      "saveSuccess": "Profile updated"
+    },
+    "cotizatie": {
+      "title": "Monthly fee",
+      "subtitle": "PFPSS membership fee — 500 RON / month",
+      "paid": "Paid",
+      "unpaid": "Unpaid",
+      "paidOn": "Paid on {date}",
+      "paidDesc": "The fee for {period} has been paid",
+      "downloadInvoice": "Download invoice",
+      "processing": "Processing...",
+      "pay": "Pay {amount} RON",
+      "payError": "Error creating payment",
+      "history": "Fee history",
+      "colMonth": "Month",
+      "colAmount": "Amount",
+      "colStatus": "Status",
+      "colDate": "Date"
+    },
+    "documente": {
+      "title": "Documents",
+      "subtitle": "Resources and documents for PFPSS members",
+      "restrictedTitle": "Documents are restricted",
+      "restrictedDesc": "Private documents are available after your membership application is approved.",
+      "noDocs": "No documents available at the moment.",
+      "download": "Download",
+      "categories": {
+        "codEtic": "Code of Ethics",
+        "ghid": "Guide",
+        "model": "Template",
+        "raport": "Report",
+        "regulament": "Regulation"
+      }
+    },
+    "petitii": {
+      "title": "Active petitions",
+      "subtitle": "Sign PFPSS petitions on behalf of your organization",
+      "noPetitions": "No active petitions at the moment.",
+      "signed": "Signed",
+      "sign": "Sign petition",
+      "alreadySigned": "You have already signed this petition",
+      "signError": "Error signing",
+      "signSuccess": "Petition signed!",
+      "petitions": {
+        "0": {
+          "title": "Open letter to the Ministry of Labour",
+          "description": "People-oriented controls, not paperwork — simplifying licensing procedures."
+        }
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "saving": "Saving...",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Continue",
+    "submit": "Submit",
+    "search": "Search",
+    "filter": "Filter",
+    "all": "All",
+    "none": "None",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "despre": {
+    "badge": "About PFPSS",
+    "hero": {
+      "title": "Unity for dignity — the voice of private social service providers.",
+      "description": "PFPSS brings together professionals from Romania's private residential elderly care sector. Through advocacy, collaboration and education, we support providers in their effort to deliver services at the highest European standards.",
+      "imageAlt": "Elderly care services"
+    },
+    "mission": {
+      "title": "Our mission",
+      "description": "We actively support private providers in the social assistance sector, offering them a platform for expression, valuable resources and networking opportunities. We strive to be the central pillar for our members in interactions with authorities, government agencies and international partners, advocating for an optimal legislative environment and recognition of the vital contribution of the private sector to social assistance in Romania."
+    },
+    "vision": {
+      "title": "Our vision",
+      "description": "We envision a Romania where quality access to social assistance is guaranteed for all, regardless of the difficulties faced. Through unity, innovation and unwavering commitment, we reshape the social assistance landscape to respond efficiently and flexibly to the real needs of the community."
+    },
+    "directionsTitle": "Three directions guiding the patronat",
+    "directions": {
+      "0": {
+        "title": "Representation",
+        "description": "The voice of the private sector before the Ministry of Labour, ANPC and Parliament."
+      },
+      "1": {
+        "title": "Standards",
+        "description": "Best practice guides and a mandatory Code of Ethics for all members."
+      },
+      "2": {
+        "title": "Community",
+        "description": "Monthly meetings, experience exchanges and international partnerships."
+      }
+    },
+    "valuesTitle": "Our values",
+    "values": {
+      "0": {
+        "title": "Excellence",
+        "description": "We promote the highest quality standards in all aspects of care activity."
+      },
+      "1": {
+        "title": "Innovation",
+        "description": "We encourage creative thinking to develop efficient solutions to social challenges."
+      },
+      "2": {
+        "title": "Integrity",
+        "description": "We act with honesty, transparency and responsibility in all our initiatives."
+      },
+      "3": {
+        "title": "Collaboration",
+        "description": "We believe in the power of partnerships and teamwork for common goals."
+      },
+      "4": {
+        "title": "Respect",
+        "description": "We treat with dignity the beneficiaries, providers and partners across the social ecosystem."
+      }
+    },
+    "commitment": {
+      "title": "Our commitment",
+      "description1": "At PFPSS we believe that the dignity of every person is a fundamental right. Under the motto \"Unity for Dignity\", we promote and protect this principle in all our activities. In a world where social challenges become increasingly complex, unity among providers is the key to a high standard of care for the most vulnerable members of the community.",
+      "description2": "We address all private social service providers who share our vision of humanitarian care centered on human dignity.",
+      "join": "Join PFPSS"
+    },
+    "documents": {
+      "title": "Public documents",
+      "subtitle": "Everything related to PFPSS governance and activity, accessible to anyone — without authentication. Detailed documents for members are in the private area.",
+      "publicPositions": "Public positions",
+      "open": "Open",
+      "openLetter": {
+        "title": "Open letter to the Ministry of Labour — simplifying licensing (no. 61/23.07.2026)",
+        "description": "Official request regarding the continuation of simplifying licensing procedures and orienting controls towards effectively protecting beneficiaries, following the letter from the Council of Europe Commissioner for Human Rights."
+      },
+      "membersOnly": {
+        "title": "Members-only documents",
+        "description": "Detailed contract templates, ISO procedures, job descriptions, meeting archives, legal consulting and inspection response templates are available in the private area.",
+        "login": "Member login"
+      }
+    },
+    "stats": {
+      "licensedHomes": "Licensed care homes in Romania",
+      "licensedHomesDesc": "794 homes · 34,310 beds · 43 beds/home · 42 counties",
+      "gapAnalysis": "Need vs national capacity",
+      "gapAnalysisDesc": "2.35M elderly 70+ vs 34,310 beds · 1.46% coverage"
+    },
+    "team": {
+      "badge": "Team",
+      "title": "PFPSS leadership",
+      "subtitle": "The patronat's board is made up of representatives elected by the General Assembly of members and supported by a dedicated executive team.",
+      "description": "The PFPSS board is elected by the General Assembly of members for a four-year term and is publicly accountable for the strategic direction of the patronat. The executive team ensures daily implementation and project coordination.",
+      "roles": {
+        "katia": "Advocacy & Institutional representation",
+        "georgeta": "Member relations & Quality standards",
+        "loredana": "Partnerships & National/international representation",
+        "tania": "Public communication & Press relations"
+      },
+      "descriptions": {
+        "katia": "Leads advocacy efforts and institutional representation of private providers in relation to public authorities.",
+        "georgeta": "Coordinates member relations and quality standards applied in residential centers.",
+        "loredana": "Responsible for developing partnerships and representing PFPSS in national and international forums.",
+        "tania": "Coordinates public communication, press relations and PFPSS information initiatives."
+      }
+    },
+    "cta": {
+      "title": "Your voice matters before the authorities",
+      "description": "Join the PFPSS community for institutional representation, legal consulting and access to the network of private providers.",
+      "becomeMember": "Become a member",
+      "contactTeam": "Talk to the team"
+    }
+  },
+  "membri": {
+    "badge": "PFPSS Members",
+    "hero": {
+      "title": "Private social service providers, united for a common standard.",
+      "description": "PFPSS members are residential centers, non-governmental organizations and accredited private operators who share the mission of providing dignified care to Romania's elderly.",
+      "requestMembership": "Request membership",
+      "aboutPfpss": "About PFPSS",
+      "imageAlt": "PFPSS Members"
+    },
+    "criteriaBadge": "Requirements",
+    "criteriaTitle": "Membership criteria",
+    "criteriaDescription": "To become a PFPSS member, the organization must meet the following criteria. The process is transparent and based exclusively on compliance with legal and professional standards.",
+    "criteria": {
+      "0": {
+        "title": "Accreditation per Law 197/2012",
+        "description": "Active accreditation as a social service provider, in accordance with current legislation."
+      },
+      "1": {
+        "title": "Operating license",
+        "description": "Valid license for at least one social service, issued by the competent authority."
+      },
+      "2": {
+        "title": "Minimum quality standards",
+        "description": "Compliance with the minimum quality standards applicable to the social services offered."
+      },
+      "3": {
+        "title": "Code of Ethics and PFPSS Statute",
+        "description": "Voluntary acceptance of the Code of Ethics and the patronat's Statute by signature."
+      },
+      "4": {
+        "title": "Annual membership fee",
+        "description": "Payment of the annual fee set by the General Assembly of PFPSS members."
+      }
+    },
+    "benefitsBadge": "Value",
+    "benefitsTitle": "Membership benefits",
+    "benefitsDescription": "PFPSS members benefit from an integrated package of professional services — from institutional representation to legal consulting and access to a national network of providers.",
+    "benefits": {
+      "0": {
+        "title": "Institutional representation",
+        "description": "Your voice before central and local authorities — ministry, parliament, agencies."
+      },
+      "1": {
+        "title": "Legal consulting",
+        "description": "Legal assistance and support in relations with control and inspection bodies."
+      },
+      "2": {
+        "title": "National provider network",
+        "description": "Access to the community of private providers and best practices across the sector."
+      },
+      "3": {
+        "title": "Working groups & conferences",
+        "description": "Participation in thematic groups, national conferences and international exchanges."
+      },
+      "4": {
+        "title": "Accreditation & recertification support",
+        "description": "Guidance through the accreditation, licensing and periodic recertification process."
+      },
+      "5": {
+        "title": "Public visibility",
+        "description": "Promotion in the patronat's advocacy and public communication campaigns."
+      }
+    },
+    "stepsBadge": "Process",
+    "stepsTitle": "Four steps to membership",
+    "stepsDescription": "From the initial request to account activation — a clear, transparent and efficient process.",
+    "steps": {
+      "0": {
+        "title": "Submit your request",
+        "description": "Fill in the online form with your organization's details. It takes no more than 5 minutes."
+      },
+      "1": {
+        "title": "File validation",
+        "description": "The PFPSS team verifies the accreditation, active licenses and compliance with criteria."
+      },
+      "2": {
+        "title": "Board approval",
+        "description": "The request is analyzed and voted on at the next PFPSS board meeting."
+      },
+      "3": {
+        "title": "Account activation",
+        "description": "You get access to the network, legal consulting, working groups and private resources."
+      }
+    },
+    "ctaBadge": "Join",
+    "ctaTitle": "Are you a private social service provider?",
+    "ctaDescription": "Join PFPSS to benefit from institutional representation, legal consulting and access to professional resources. Our team will contact you within 48 working hours.",
+    "ctaRequestMembership": "Request membership",
+    "ctaQuestions": "Have questions?"
+  },
+  "contact": {
+    "badge": "Contact PFPSS",
+    "hero": {
+      "title": "Talk to the PFPSS team",
+      "description": "Whether you are a social service provider interested in joining us, a beneficiary looking for information, or an institutional partner, our team is ready to respond."
+    },
+    "infoBadge": "Contact details",
+    "info": {
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Hours",
+      "hoursValue": "Monday – Friday · 09:00 – 17:00"
+    },
+    "form": {
+      "title": "Send us a message",
+      "description": "We will get back to you as soon as possible. For urgent requests, please use the phone.",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "email@example.ro",
+      "phone": "Phone",
+      "phonePlaceholder": "07xx xxx xxx",
+      "subject": "Subject",
+      "selectSubject": "Select...",
+      "subjects": {
+        "membership": "I want to become a member",
+        "legal": "Legal consulting",
+        "press": "For press",
+        "partnership": "Partnership",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Write your message here...",
+      "submit": "Send message",
+      "success": "Message sent!",
+      "successDesc": "We will get back to you within 48 working hours.",
+      "privacyPrefix": "By submitting this form you agree to the",
+      "privacyLink": "Privacy Policy"
+    },
+    "faqTitle": "Frequently asked questions",
+    "faqs": {
+      "0": {
+        "question": "How soon will I get a response?",
+        "answer": "The PFPSS team responds within 48 working hours to all requests received via the online form or email. For urgent matters, we recommend contacting us by phone."
+      },
+      "1": {
+        "question": "Can I request an on-site meeting?",
+        "answer": "Yes. To schedule a meeting at the PFPSS office, please send a request via the contact form or to office@pfpss.ro, indicating the desired topic and preferred time slot."
+      },
+      "2": {
+        "question": "Who do I contact for press?",
+        "answer": "For press and journalist requests, please write to office@pfpss.ro or call 0732 009 000, clearly mentioning 'For press' in the subject of the message."
+      }
+    },
+    "exploreTitle": "Explore further",
+    "exploreMore": "Explore",
+    "explore": {
+      "0": {
+        "title": "Members",
+        "subtitle": "National PFPSS network",
+        "description": "Criteria, benefits and how to become a member."
+      },
+      "1": {
+        "title": "Advocacy",
+        "subtitle": "Public campaigns and petitions",
+        "description": "Official positions and initiatives through which we defend the sector."
+      },
+      "2": {
+        "title": "Legislation",
+        "subtitle": "Library of normative acts",
+        "description": "The legal framework applicable to private providers, updated."
+      }
+    }
+  },
+  "advocacy": {
+    "badge": "Advocacy & petitions",
+    "hero": {
+      "title": "Public action for a dignified social system.",
+      "description": "PFPSS coordinates campaigns, petitions and official positions to defend the interests of private providers and beneficiaries."
+    },
+    "processTitle": "From the technical file to the public decision",
+    "processDescription": "Each campaign starts from a real need of our members: a legislative analysis, a consultation with specialists, an official position and, when needed, a public petition or legal action.",
+    "details": "Details",
+    "comingSoon": "Details coming soon",
+    "campaigns": {
+      "0": {
+        "badge": "July 2026",
+        "title": "Open letter to the Ministry of Labour: simple licensing, people-oriented controls",
+        "description": "Official request (no. 61/23.07.2026) for the continuation of licensing simplification, form-neutral financing and inspections centered on beneficiaries' rights.",
+        "href": "/en/stiri/scrisoare-deschisa-ministerul-muncii-iulie-2026",
+        "external": "false"
+      },
+      "1": {
+        "badge": "Public petition",
+        "title": "STOP state abuses against residential elderly centers",
+        "description": "We ask the Government to revise the regulations that negatively affect private residential centers.",
+        "href": "https://www.petitieonline.com/stop_abuzurilor_statului_asupra_centrelor_rezidentiale_de_btrani",
+        "external": "true"
+      },
+      "2": {
+        "badge": "Proposal",
+        "title": "Indexing the standard cost per beneficiary with inflation",
+        "description": "The financial sustainability of services depends on funding correlated with economic reality.",
+        "href": "",
+        "external": "false"
+      },
+      "3": {
+        "badge": "2023",
+        "title": "Simplification of accreditation procedures 2023",
+        "description": "Reducing bureaucracy for small and medium centers following dialogue with the Ministry of Labour.",
+        "href": "",
+        "external": "false"
+      }
+    },
+    "exploreTitle": "Explore further",
+    "exploreMore": "Explore",
+    "explore": {
+      "0": {
+        "title": "Legislation",
+        "subtitle": "Library of normative acts",
+        "description": "The legal framework applicable to private providers, updated.",
+        "href": "/resurse"
+      },
+      "1": {
+        "title": "Members",
+        "subtitle": "National PFPSS network",
+        "description": "Criteria, benefits and how to become a member.",
+        "href": "/membri"
+      },
+      "2": {
+        "title": "Contact",
+        "subtitle": "Talk to the team",
+        "description": "Phone, email and form for any request.",
+        "href": "/contact"
+      }
+    },
+    "ctaTitle": "Your voice matters before the authorities",
+    "ctaDescription": "Join the PFPSS community for institutional representation, legal consulting and access to the network of private providers.",
+    "ctaBecomeMember": "Become a member",
+    "ctaContactTeam": "Talk to the team"
+  },
+  "resurse": {
+    "badge": "PFPSS Resources",
+    "hero": {
+      "title": "Legislative library for private providers.",
+      "description": "The regulatory framework, always updated. Relevant legislation, public governance documents and resources for members."
+    },
+    "legislationTitle": "The regulatory framework, always updated",
+    "legislationDescription": "All normative acts relevant to private social service providers, with links to the official text.",
+    "publicDocsTitle": "Public documents",
+    "publicDocsDescription": "Everything related to PFPSS governance and activity, accessible to anyone — without authentication.",
+    "publicPositions": "Public positions",
+    "open": "Open",
+    "publicDocs": {
+      "0": {
+        "title": "Open letter to the Ministry of Labour — simplifying licensing (no. 61/23.07.2026)",
+        "description": "Official request regarding the continuation of simplifying licensing procedures and orienting controls towards effectively protecting beneficiaries, following the letter from the Council of Europe Commissioner for Human Rights."
+      }
+    },
+    "membersOnly": {
+      "title": "Members-only documents",
+      "description": "Detailed contract templates, ISO procedures, job descriptions, meeting archives, legal consulting and inspection response templates are available in the private area.",
+      "login": "Member login"
+    },
+    "exploreTitle": "Explore further",
+    "exploreMore": "Explore",
+    "explore": {
+      "0": {
+        "title": "Advocacy",
+        "subtitle": "Campaigns and positions",
+        "description": "How we represent the sector before the authorities.",
+        "href": "/advocacy"
+      },
+      "1": {
+        "title": "Members",
+        "subtitle": "National network",
+        "description": "Criteria, benefits and how to become a member.",
+        "href": "/membri"
+      },
+      "2": {
+        "title": "Petitions",
+        "subtitle": "Sign officially",
+        "description": "Active petitions for legislative changes.",
+        "href": "/petitii"
+      }
+    },
+    "ctaTitle": "Your voice matters before the authorities",
+    "ctaDescription": "Join the PFPSS community for institutional representation, legal consulting and access to the network of private providers.",
+    "ctaBecomeMember": "Become a member",
+    "ctaContactTeam": "Talk to the team"
+  },
+  "petitii": {
+    "badge": "PFPSS Petitions",
+    "hero": {
+      "title": "The voice of private social service providers",
+      "description": "Public positions that member organizations and licensed providers can support institutionally through validated signature — one signature per Tax ID, confirmed by email."
+    },
+    "howTitle": "How it works",
+    "howDescription": "Each petition is an official proceeding. Your signature is validated institutionally to ensure real legal weight before the authorities.",
+    "steps": {
+      "0": {
+        "title": "Read the petition",
+        "description": "Review the official text, legal references and proposed changes."
+      },
+      "1": {
+        "title": "Validate signature",
+        "description": "One signature per Tax ID, confirmed by email for institutional validity."
+      },
+      "2": {
+        "title": "Sign publicly",
+        "description": "Your signature becomes part of the official proceeding submitted to the competent authorities."
+      }
+    },
+    "activeTitle": "Active petitions",
+    "petitionNumber": "Petition #{number}",
+    "viewAndSign": "View and sign",
+    "infoBanner": "The signature is valid only for organizations and licensed providers. Each signature is verified by Tax ID and confirmed by email to ensure the proceeding has real institutional weight.",
+    "petitions": {
+      "0": {
+        "title": "Removing the ISU authorization from the mandatory documents for licensing residential social services",
+        "description": "Petition of residential social service operators in Romania — homes for elderly people and centers for adults with disabilities — to amend art. 12 para. (2) let. k) of Law no. 197/2012.",
+        "status": "Active"
+      }
+    },
+    "ctaTitle": "Propose a petition",
+    "ctaDescription": "Have you identified a legislative or administrative problem affecting private social service providers? Write to us and the PFPSS legal team will evaluate the opportunity for a new official petition.",
+    "ctaContact": "Contact the team",
+    "ctaAllCampaigns": "See all campaigns"
+  },
+  "camine": {
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Care homes directory"
+    },
+    "badge": "National directory",
+    "hero": {
+      "title": "The directory of elderly care homes in Romania",
+      "description": "{total} care homes indexed nationwide — with contact details, location, licensing status and capacity."
+    },
+    "stats": {
+      "total": "Total homes",
+      "licensed": "Licensed",
+      "withPhone": "With phone",
+      "counties": "Counties"
+    },
+    "searchPlaceholder": "Search by name, locality, address...",
+    "allCounties": "All counties",
+    "licensedOnly": "Licensed only",
+    "withPhone": "With phone",
+    "resultsCount": "{count} results",
+    "resetFilters": "Reset filters",
+    "noResults": "No results found.",
+    "capacity": "{count} places",
+    "phone": "Phone",
+    "website": "Website",
+    "directions": "Directions",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "camineAutorizate": {
+    "title": "Licensed elderly care homes",
+    "source": "Source: Ministry of Labour, Family, Youth and Social Solidarity · Date: 10.03.2026",
+    "stats": {
+      "total": "Total",
+      "private": "Private",
+      "public": "Public",
+      "counties": "Counties"
+    },
+    "searchPlaceholder": "Search name, provider, address...",
+    "allCounties": "All counties",
+    "allTypes": "All types",
+    "types": {
+      "private": "Private",
+      "public": "Public"
+    },
+    "reset": "Reset",
+    "resultsCount": "{count} homes shown",
+    "columns": {
+      "type": "Type",
+      "provider": "Provider",
+      "service": "Service",
+      "county": "County",
+      "locality": "Locality",
+      "address": "Address",
+      "capacity": "Capacity",
+      "licenseFrom": "License from",
+      "licenseNumber": "License no."
+    },
+    "footer": "Data extracted from official MMJS PDF · {total} licensed homes as of 10.03.2026"
+  },
+  "stiri": {
+    "badge": "News & Press",
+    "hero": {
+      "title": "News, press releases and public positions.",
+      "description": "Press releases, analyses and public PFPSS actions for the private residential elderly care sector."
+    },
+    "featured": "Featured",
+    "readArticle": "Read article",
+    "allArticles": "All articles",
+    "read": "Read",
+    "exploreTitle": "Explore further",
+    "exploreMore": "Explore",
+    "explore": {
+      "0": {
+        "title": "Advocacy",
+        "subtitle": "Campaigns and positions",
+        "description": "How we represent the sector before the authorities.",
+        "href": "/advocacy"
+      },
+      "1": {
+        "title": "Petitions",
+        "subtitle": "Sign officially",
+        "description": "Active petitions for legislative changes.",
+        "href": "/petitii"
+      },
+      "2": {
+        "title": "Resources",
+        "subtitle": "Legislative library",
+        "description": "The legal framework applicable to private providers.",
+        "href": "/resurse"
+      }
+    },
+    "ctaTitle": "Your voice matters before the authorities",
+    "ctaDescription": "Join the PFPSS community for institutional representation, legal consulting and access to the network of private providers.",
+    "ctaBecomeMember": "Become a member",
+    "ctaContactTeam": "Talk to the team"
+  },
+  "admin": {
+    "title": "Administration",
+    "subtitle": "Manage membership applications and PFPSS members",
+    "tabs": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "all": "All"
+    },
+    "status": {
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "noRequests": "No requests in this category.",
+    "cuiLabel": "Tax ID",
+    "contactPerson": "Contact person",
+    "email": "Email",
+    "phone": "Phone",
+    "licenseLabel": "License",
+    "approve": "Approve",
+    "reject": "Reject",
+    "approveError": "Error approving",
+    "approveSuccess": "Application approved!",
+    "rejectError": "Error rejecting",
+    "rejectSuccess": "Application rejected"
+  },
+  "camineDetail": {
+    "notFound": "Care home not found",
+    "backToDirector": "Back to directory",
+    "backToDirectorFull": "Back to the care homes directory",
+    "breadcrumb": {
+      "home": "Home",
+      "director": "Care homes directory"
+    },
+    "county": "County",
+    "licensed": "Licensed",
+    "reviews": "{count} reviews",
+    "capacity": "{count} places",
+    "contactInfo": "Contact details",
+    "phone": "Phone",
+    "website": "Website",
+    "address": "Address",
+    "directions": "Directions on Google Maps",
+    "licenseStatus": "Licensing status",
+    "cui": "Tax ID (CUI)",
+    "licenseNumber": "License no.",
+    "licenseDate": "License date",
+    "capacityLabel": "Capacity",
+    "licenseSource": "Data according to the official list of the Ministry of Labour, Family, Youth and Social Solidarity.",
+    "mapTitle": "Map",
+    "contactCta": {
+      "title": "Contact this care home",
+      "description": "Call directly for information about available places, fees and accommodation conditions."
+    },
+    "visitWebsite": "Visit website",
+    "mapDirections": "Map directions",
+    "contactPfpss": "Contact PFPSS",
+    "related": "Other care homes in {judet}",
+    "seeAllIn": "See all in {judet}"
+  },
+  "stiriDetail": {
+    "notFound": "Article not found",
+    "backToNews": "Back to news",
+    "breadcrumb": {
+      "home": "Home",
+      "news": "News"
+    },
+    "downloadPdf": "Download the full document (PDF)",
+    "downloadPdfButton": "Download PDF",
+    "petitionNote": "This action continues PFPSS's efforts for a fair licensing framework — including the petition to remove the ISU authorization from the mandatory licensing documents.",
+    "signPetition": "Sign the ISU petition",
+    "relatedArticles": "Related articles"
+  }
+}
