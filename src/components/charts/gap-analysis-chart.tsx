@@ -84,7 +84,7 @@ export function GapAnalysisChart() {
         grid: { display: false },
         ticks: {
           color: "rgba(26, 35, 50, 0.7)",
-          font: { size: 12, weight: "medium" as const },
+          font: { size: 12, weight: "normal" as const },
         },
       },
     },
