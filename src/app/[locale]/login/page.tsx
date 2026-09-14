@@ -25,18 +25,31 @@ function LoginForm() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const supabase = createClient();
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      if (session) router.push(redirect);
-    });
-  }, [router, redirect]);
+    async function checkSession() {
+      const supabase = createClient();
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) return;
+      // Redirect based on role
+      const { data: profile } = await supabase
+        .from("profiles")
+        .select("role")
+        .eq("id", session.user.id)
+        .single();
+      if (profile?.role === "admin") {
+        router.push(`/${locale === "en" ? "en/" : ""}admin`);
+      } else {
+        router.push(redirect);
+      }
+    }
+    checkSession();
+  }, [router, redirect, locale]);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
 
     const supabase = createClient();
-    const { error } = await supabase.auth.signInWithPassword({
+    const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
@@ -48,7 +61,23 @@ function LoginForm() {
     }
 
     toast.success(t("success"));
-    router.push(redirect);
+
+    // Check role and redirect accordingly
+    if (data.user) {
+      const { data: profile } = await supabase
+        .from("profiles")
+        .select("role")
+        .eq("id", data.user.id)
+        .single();
+
+      if (profile?.role === "admin") {
+        router.push(`/${locale === "en" ? "en/" : ""}admin`);
+      } else {
+        router.push(redirect);
+      }
+    } else {
+      router.push(redirect);
+    }
     router.refresh();
   }
 

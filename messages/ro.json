@@ -317,11 +317,12 @@
       "signSuccess": "Petiție semnată!",
       "petitions": {
         "0": {
-          "title": "Scrisoare deschisă către Ministerul Muncii",
-          "description": "Controale orientate către om, nu către hârtii — simplificarea procedurilor de licențiere."
+          "title": "Eliminarea autorizației ISU dintre documentele obligatorii pentru licențierea serviciilor sociale rezidențiale",
+          "description": "Petiția operatorilor de servicii sociale rezidențiale din România — cămine pentru persoane vârstnice și centre pentru persoane adulte cu dizabilități — pentru modificarea art. 12 alin. (2) lit. k) din Legea nr. 197/2012."
         }
       }
-    }
+    },
+    "adminPanel": "Panou admin"
   },
   "common": {
     "loading": "Se încarcă...",
@@ -755,9 +756,13 @@
     "infoBanner": "Semnătura este valabilă doar pentru organizații și furnizori licențiați. Fiecare semnătură este verificată prin CUI și confirmată prin email pentru a asigura demersului greutate instituțională reală.",
     "petitions": {
       "0": {
+        "slug": "eliminarea-autorizatiei-isu-din-licentiere",
         "title": "Eliminarea autorizației ISU dintre documentele obligatorii pentru licențierea serviciilor sociale rezidențiale",
         "description": "Petiția operatorilor de servicii sociale rezidențiale din România — cămine pentru persoane vârstnice și centre pentru persoane adulte cu dizabilități — pentru modificarea art. 12 alin. (2) lit. k) din Legea nr. 197/2012.",
-        "status": "Activă"
+        "status": "Activă",
+        "fullText": "Prin prezenta petiție, solicităm Ministerului Muncii, Familiei, Tineretului și Solidarității Sociale modificarea art. 12 alin. (2) lit. k) din Legea nr. 197/2012 privind asistența socială, prin eliminarea autorizației de funcționare emise de Inspectoratul General pentru Situații de Urgență (ISU) din lista documentelor obligatorii pentru obținerea licenței de funcționare a serviciilor sociale rezidențiale.\n\nAceastă cerință generează dublarea procedurilor de autorizare, costuri suplimentare semnificative pentru furnizorii privați și întârzieri în funcționarea centrelor de îngrijire — fără a contribui efectiv la calitatea serviciilor sau la siguranța beneficiarilor, care este deja reglementată prin alte acte normative.\n\nEliminarea acestei cerințe va permite deschiderea mai rapidă a noi locuri de îngrijire, reducerea birocrației și orientarea resurselor către calitatea efectivă a serviciilor prestate.",
+        "target": "Ministerul Muncii, Familiei, Tineretului și Solidarității Sociale",
+        "legalRef": "Legea nr. 197/2012, art. 12 alin. (2) lit. k)"
       }
     },
     "ctaTitle": "Propune o petiție",
@@ -887,7 +892,88 @@
     "approveError": "Eroare la aprobare",
     "approveSuccess": "Cerere aprobată!",
     "rejectError": "Eroare la respingere",
-    "rejectSuccess": "Cerere respinsă"
+    "rejectSuccess": "Cerere respinsă",
+    "overview": {
+      "title": "Panou de administrare",
+      "subtitle": "Gestionează cererile de aderare, membrii și activitatea PFPSS",
+      "pending": "În așteptare",
+      "approved": "Aprobate",
+      "rejected": "Respins",
+      "total": "Total organizații",
+      "paidThisMonth": "Cotizații plătite luna aceasta",
+      "petitionSignatures": "Semnături petiții",
+      "documents": "Documente",
+      "members": "Membri aprobate",
+      "recentRequests": "Cereri recente",
+      "viewAll": "Vezi toate",
+      "quickActions": "Acțiuni rapide",
+      "reviewPending": "Revizuire cereri în așteptare",
+      "viewMembers": "Vezi membri",
+      "manageDocuments": "Gestionează documente"
+    },
+    "org": {
+      "title": "Organizații",
+      "subtitle": "Gestionează cererile de aderare și organizațiile membre",
+      "searchPlaceholder": "Caută după nume, CUI, județ...",
+      "allCounties": "Toate județele",
+      "noResults": "Nicio organizație găsită.",
+      "viewDetails": "Vezi detalii",
+      "rejectReason": "Motiv respingere",
+      "rejectReasonPlaceholder": "Introdu motivul respingerii...",
+      "cancel": "Anulează",
+      "confirmReject": "Confirmă respingerea",
+      "submittedOn": "Depus la",
+      "approvedOn": "Aprobat la",
+      "rejectedOn": "Respins la",
+      "fields": {
+        "legalName": "Denumire legală",
+        "cui": "CUI",
+        "regNumber": "Nr. înregistrare",
+        "legalForm": "Formă juridică",
+        "contactName": "Persoană de contact",
+        "contactEmail": "Email contact",
+        "contactPhone": "Telefon",
+        "county": "Județ",
+        "city": "Oraș",
+        "address": "Adresă",
+        "serviceType": "Tip serviciu",
+        "licenseNumber": "Nr. licență",
+        "licenseExpiry": "Expiră la",
+        "accreditationNumber": "Nr. acreditare",
+        "capacity": "Capacitate",
+        "description": "Descriere",
+        "website": "Website"
+      }
+    },
+    "members": {
+      "title": "Membri",
+      "subtitle": "Organizațiile membre aprobate",
+      "searchPlaceholder": "Caută după nume, CUI, județ...",
+      "allCounties": "Toate județele",
+      "noResults": "Niciun membru găsit.",
+      "memberSince": "Membru din",
+      "suspend": "Suspendă",
+      "reactivate": "Reactivează",
+      "suspendError": "Eroare la suspendare",
+      "suspendSuccess": "Organizație suspendată",
+      "reactivateError": "Eroare la reactivare",
+      "reactivateSuccess": "Organizație reactivată"
+    },
+    "docs": {
+      "title": "Documente",
+      "subtitle": "Gestionează documentele disponibile pentru membri",
+      "noDocs": "Nu există documente.",
+      "addDocument": "Adaugă document",
+      "comingSoon": "Gestionarea documentelor va fi disponibilă în curând."
+    },
+    "peticii": {
+      "title": "Petiții",
+      "subtitle": "Vezi semnăturile pe petiții",
+      "noSignatures": "Nicio semnătură.",
+      "petition": "Petiție",
+      "organization": "Organizație",
+      "signedOn": "Semnat la"
+    }
   },
   "camineDetail": {
     "notFound": "Cămin negăsit",
@@ -935,5 +1021,38 @@
     "petitionNote": "Acțiunea continuă demersurile PFPSS pentru un cadru de licențiere echitabil — inclusiv petiția privind eliminarea autorizației ISU dintre documentele obligatorii pentru licențiere.",
     "signPetition": "Semnează petiția ISU",
     "relatedArticles": "Articole conexe"
+  },
+  "petitiiDetail": {
+    "notFound": "Petiție negăsită",
+    "backToPetitions": "Înapoi la petiții",
+    "breadcrumb": {
+      "home": "Acasă",
+      "petitions": "Petiții"
+    },
+    "target": "Către",
+    "legalRef": "Bază legală",
+    "fullText": "Textul petiției",
+    "signatures": "{count} semnături",
+    "noSignatures": "Nicio organizație nu a semnat încă",
+    "signaturesList": "Organizații semnatare",
+    "signAsMember": "Semnează ca membru",
+    "loginToSign": "Conectează-te pentru a semna",
+    "alreadySigned": "Organizația ta a semnat deja",
+    "orgName": "Organizație",
+    "county": "Județ",
+    "signedOn": "Semnat la"
+  },
+  "adminLayout": {
+    "adminPanel": "Panou admin",
+    "administrator": "Administrator",
+    "publicSite": "Site public",
+    "logout": "Deconectare",
+    "nav": {
+      "overview": "Overview",
+      "organizations": "Organizații",
+      "members": "Membri",
+      "documents": "Documente",
+      "petitions": "Petiții"
+    }
   }
 }

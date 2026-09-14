@@ -15,7 +15,7 @@ type Petition = {
 
 const petitions: Petition[] = [
   {
-    slug: "scrisoare-deschisa-ministerul-muncii",
+    slug: "eliminarea-autorizatiei-isu-din-licentiere",
     titleKey: "petitions.0.title",
     descKey: "petitions.0.description",
     href: "/petitii",

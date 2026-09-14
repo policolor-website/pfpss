@@ -317,11 +317,12 @@
       "signSuccess": "Petition signed!",
       "petitions": {
         "0": {
-          "title": "Open letter to the Ministry of Labour",
-          "description": "People-oriented controls, not paperwork — simplifying licensing procedures."
+          "title": "Removal of ISU authorization from the mandatory documents for licensing residential social services",
+          "description": "Petition of residential social service operators in Romania — homes for the elderly and centres for adults with disabilities — to amend art. 12 para. (2) let. k) of Law no. 197/2012."
         }
       }
-    }
+    },
+    "adminPanel": "Admin panel"
   },
   "common": {
     "loading": "Loading...",
@@ -755,9 +756,13 @@
     "infoBanner": "The signature is valid only for organizations and licensed providers. Each signature is verified by Tax ID and confirmed by email to ensure the proceeding has real institutional weight.",
     "petitions": {
       "0": {
-        "title": "Removing the ISU authorization from the mandatory documents for licensing residential social services",
-        "description": "Petition of residential social service operators in Romania — homes for elderly people and centers for adults with disabilities — to amend art. 12 para. (2) let. k) of Law no. 197/2012.",
-        "status": "Active"
+        "slug": "eliminarea-autorizatiei-isu-din-licentiere",
+        "title": "Removal of ISU authorization from the mandatory documents for licensing residential social services",
+        "description": "Petition of residential social service operators in Romania — homes for the elderly and centres for adults with disabilities — to amend art. 12 para. (2) let. k) of Law no. 197/2012.",
+        "status": "Active",
+        "fullText": "Through this petition, we request the Ministry of Labour, Family, Youth and Social Solidarity to amend art. 12 para. (2) let. k) of Law no. 197/2012 on social assistance, by removing the operating authorization issued by the General Inspectorate for Emergency Situations (ISU) from the list of mandatory documents for obtaining the operating license for residential social services.\n\nThis requirement generates duplication of authorization procedures, significant additional costs for private providers and delays in the operation of care centres — without effectively contributing to the quality of services or the safety of beneficiaries, which is already regulated by other normative acts.\n\nRemoving this requirement will allow faster opening of new care places, reduce bureaucracy and direct resources towards the effective quality of services provided.",
+        "target": "Ministry of Labour, Family, Youth and Social Solidarity",
+        "legalRef": "Law no. 197/2012, art. 12 para. (2) let. k)"
       }
     },
     "ctaTitle": "Propose a petition",
@@ -887,7 +892,88 @@
     "approveError": "Error approving",
     "approveSuccess": "Application approved!",
     "rejectError": "Error rejecting",
-    "rejectSuccess": "Application rejected"
+    "rejectSuccess": "Application rejected",
+    "overview": {
+      "title": "Administration panel",
+      "subtitle": "Manage membership applications, members and PFPSS activity",
+      "pending": "Pending",
+      "approved": "Approved",
+      "rejected": "Rejected",
+      "total": "Total organizations",
+      "paidThisMonth": "Fees paid this month",
+      "petitionSignatures": "Petition signatures",
+      "documents": "Documents",
+      "members": "Approved members",
+      "recentRequests": "Recent requests",
+      "viewAll": "View all",
+      "quickActions": "Quick actions",
+      "reviewPending": "Review pending requests",
+      "viewMembers": "View members",
+      "manageDocuments": "Manage documents"
+    },
+    "org": {
+      "title": "Organizations",
+      "subtitle": "Manage membership applications and member organizations",
+      "searchPlaceholder": "Search by name, tax ID, county...",
+      "allCounties": "All counties",
+      "noResults": "No organization found.",
+      "viewDetails": "View details",
+      "rejectReason": "Rejection reason",
+      "rejectReasonPlaceholder": "Enter the rejection reason...",
+      "cancel": "Cancel",
+      "confirmReject": "Confirm rejection",
+      "submittedOn": "Submitted on",
+      "approvedOn": "Approved on",
+      "rejectedOn": "Rejected on",
+      "fields": {
+        "legalName": "Legal name",
+        "cui": "Tax ID (CUI)",
+        "regNumber": "Registration no.",
+        "legalForm": "Legal form",
+        "contactName": "Contact person",
+        "contactEmail": "Contact email",
+        "contactPhone": "Phone",
+        "county": "County",
+        "city": "City",
+        "address": "Address",
+        "serviceType": "Service type",
+        "licenseNumber": "License no.",
+        "licenseExpiry": "Expires on",
+        "accreditationNumber": "Accreditation no.",
+        "capacity": "Capacity",
+        "description": "Description",
+        "website": "Website"
+      }
+    },
+    "members": {
+      "title": "Members",
+      "subtitle": "Approved member organizations",
+      "searchPlaceholder": "Search by name, tax ID, county...",
+      "allCounties": "All counties",
+      "noResults": "No member found.",
+      "memberSince": "Member since",
+      "suspend": "Suspend",
+      "reactivate": "Reactivate",
+      "suspendError": "Error suspending",
+      "suspendSuccess": "Organization suspended",
+      "reactivateError": "Error reactivating",
+      "reactivateSuccess": "Organization reactivated"
+    },
+    "docs": {
+      "title": "Documents",
+      "subtitle": "Manage documents available to members",
+      "noDocs": "No documents.",
+      "addDocument": "Add document",
+      "comingSoon": "Document management will be available soon."
+    },
+    "peticii": {
+      "title": "Petitions",
+      "subtitle": "View petition signatures",
+      "noSignatures": "No signatures.",
+      "petition": "Petition",
+      "organization": "Organization",
+      "signedOn": "Signed on"
+    }
   },
   "camineDetail": {
     "notFound": "Care home not found",
@@ -935,5 +1021,38 @@
     "petitionNote": "This action continues PFPSS's efforts for a fair licensing framework — including the petition to remove the ISU authorization from the mandatory licensing documents.",
     "signPetition": "Sign the ISU petition",
     "relatedArticles": "Related articles"
+  },
+  "petitiiDetail": {
+    "notFound": "Petition not found",
+    "backToPetitions": "Back to petitions",
+    "breadcrumb": {
+      "home": "Home",
+      "petitions": "Petitions"
+    },
+    "target": "Addressed to",
+    "legalRef": "Legal basis",
+    "fullText": "Petition text",
+    "signatures": "{count} signatures",
+    "noSignatures": "No organization has signed yet",
+    "signaturesList": "Signatory organizations",
+    "signAsMember": "Sign as member",
+    "loginToSign": "Log in to sign",
+    "alreadySigned": "Your organization has already signed",
+    "orgName": "Organization",
+    "county": "County",
+    "signedOn": "Signed on"
+  },
+  "adminLayout": {
+    "adminPanel": "Admin panel",
+    "administrator": "Administrator",
+    "publicSite": "Public site",
+    "logout": "Log out",
+    "nav": {
+      "overview": "Overview",
+      "organizations": "Organizations",
+      "members": "Members",
+      "documents": "Documents",
+      "petitions": "Petitions"
+    }
   }
 }
