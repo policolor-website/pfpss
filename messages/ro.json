@@ -44,6 +44,10 @@
       "cookies": "Cookies"
     },
     "legal": {
+      "privacy": "Confidențialitate",
+      "terms": "Termeni",
+      "cookies": "Cookies",
+      "cookieSettings": "Setări cookies",
       "name": "Denumire:",
       "cui": "CUI:",
       "address": "Sediu:",
@@ -1064,6 +1068,219 @@
       "members": "Membri",
       "documents": "Documente",
       "petitions": "Petiții"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "breadcrumb": {
+        "home": "Acasă",
+        "privacy": "Confidențialitate"
+      },
+      "title": "Politica de confidențialitate",
+      "subtitle": "Prelucrarea datelor personale colectate prin site-ul pfpss.ro, conform Regulamentului UE 2016/679 (GDPR).",
+      "lastUpdated": "Ultima actualizare: 15 iulie 2026",
+      "operatorLabel": "Operator de date:",
+      "operator": "Patronatul Furnizorilor Privați de Servicii Sociale (PFPSS), CUI 50457026, sediu social: Phoenicia Business Center, Corp A, interfon 14, Str. Turturelelor 11b, bl. A, sc. A, et. 1, ap. a14, Sector 3, București. Contact: office@pfpss.ro, 0732 009 000.",
+      "s1": {
+        "title": "Ce date colectăm",
+        "body": "Cererea de aderare ca membru: datele organizației (denumire, CUI, nr. înregistrare, adresă, județ, tip servicii, capacitate), datele reprezentantului legal (nume, funcție, CNP), email și telefon de contact.\n\nDocumente încărcate: certificat înregistrare/fiscală, certificat constatator sau extras registru asociații-fundații, act de identitate al reprezentantului (conține CNP și fotografie), acreditare, licență de funcționare și cererea de adeziune. Sunt stocate criptat, cu acces restricționat, și folosite exclusiv pentru validarea calității de membru.\n\nSemnarea petițiilor: denumirea și CUI-ul organizației (dacă e cazul), numele și funcția semnatarului, email, telefon, CNP și adresa IP (stocată doar sub formă de hash). CNP-ul este stocat exclusiv criptat (AES-256-GCM) plus o amprentă ireversibilă (HMAC), nu în clar. Nu este afișat public și nu este inclus în exporturile uzuale.\n\nFormularul de contact: nume, email, subiect, mesaj și adresa IP. Formularele publice (contact, autentificare, înregistrare, petiții) sunt protejate împotriva abuzului automat prin Cloudflare Turnstile.\n\nDate tehnice strict necesare: preferința de cookies și, la autentificare, sesiunea de cont (stocate local în browser). Instrumentele de analiză se încarcă doar după consimțământ. Vezi Politica de cookies.\n\nCodul numeric personal (CNP) al reprezentantului legal este prelucrat la aderare în scopul verificării identității și al întocmirii documentelor de membru, în temeiul art. 6 alin. (1) lit. b) GDPR și cu garanțiile prevăzute de art. 4 din Legea nr. 190/2018 (acces restricționat, personal desemnat, păstrare limitată). La semnarea petițiilor, CNP-ul semnatarului este prelucrat pentru unicitatea semnăturii și pentru predarea către autorități în caz justificat legal; este stocat doar criptat, pe server. Copia cărții de identitate (la aderare) poate fi supusă unei verificări automate (OCR) care implică un procesator din afara SEE (Google), doar dacă acordați consimțământul explicit la încărcare; în lipsa acestuia, documentul este verificat exclusiv manual. CNP-ul nu este afișat public."
+      },
+      "s2": {
+        "title": "Scopul și temeiul prelucrării",
+        "body": "• Procesarea cererilor de aderare și a întrebărilor — temei: măsuri precontractuale și interesul nostru legitim de a răspunde solicitărilor (art. 6 lit. b și f GDPR).\n• Comunicarea ulterioară cu membrii și partenerii — temei: executarea calității de membru (art. 6 lit. b GDPR).\n• Eventuale statistici de utilizare a site-ului — temei: consimțământul acordat în bannerul de cookies (art. 6 lit. a GDPR)."
+      },
+      "s3": {
+        "title": "Durata stocării",
+        "body": "Datele de contact ale solicitanților sunt păstrate maximum 24 de luni de la ultima interacțiune.\n\nDatele membrilor sunt păstrate pe durata calității de membru și 5 ani după încetare, conform obligațiilor legale."
+      },
+      "s4": {
+        "title": "Destinatari și persoane împuternicite",
+        "body": "Datele sunt accesate de personalul PFPSS și de următorii furnizori de servicii care acționează ca persoane împuternicite, sub clauze de confidențialitate:\n\n• Vercel Inc. — găzduirea site-ului (infrastructură globală, inclusiv SUA). Transfer în afara SEE în baza Clauzelor Contractuale Standard.\n• Supabase — baza de date și stocarea documentelor, găzduite în Uniunea Europeană (Irlanda).\n• Resend — trimiterea e-mailurilor tranzacționale (confirmări, notificări). Transfer în afara SEE în baza Clauzelor Contractuale Standard.\n• Stripe — procesarea plăților contribuției (card). Transfer în afara SEE în baza Clauzelor Contractuale Standard.\n• Cloudflare — protecție anti-bot (Turnstile) pe formularele publice.\n• ANAF — verificarea datelor de firmă după CUI, prin serviciul public al Agenției Naționale de Administrare Fiscală (operator public independent).\n• Google — verificarea automată (OCR) a documentelor încărcate, doar cu consimțământul explicit pentru cartea de identitate. Transfer în afara SEE în baza garanțiilor Google.\n\nNu vindem și nu închiriem datele dumneavoastră către terți."
+      },
+      "s5": {
+        "title": "Drepturile dumneavoastră",
+        "body": "Conform GDPR aveți dreptul la:\n• acces la datele personale;\n• rectificare sau ștergere;\n• restricționarea prelucrării;\n• portabilitatea datelor;\n• opoziție la prelucrare;\n• retragerea consimțământului oricând;\n• plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (dataprotection.ro).\n\nVă puteți exercita drepturile direct din platformă, în Setări cont → Drepturile mele (GDPR) (cerere de export sau de ștergere), ori prin email. Răspundem în cel mult 30 de zile, conform art. 12 GDPR, după verificarea identității."
+      },
+      "s6": {
+        "title": "Transferuri în afara SEE",
+        "body": "Unii furnizori (Vercel, Resend, Stripe, Google) pot prelucra date în afara Spațiului Economic European. Aceste transferuri se realizează în baza Clauzelor Contractuale Standard ale Comisiei Europene sau a altor garanții adecvate prevăzute de art. 44–49 GDPR."
+      },
+      "s7": {
+        "title": "Verificarea automată a documentelor",
+        "body": "Pentru a ajuta la validarea rapidă a documentelor de aderare, unele documente pot fi analizate automat (OCR) cu ajutorul unui procesator extern. Cartea de identitate (care conține CNP) este supusă analizei automate doar cu consimțământul dvs. explicit; altfel este verificată exclusiv manual. Nu luăm decizii cu efecte juridice bazate exclusiv pe prelucrare automată — decizia de aderare aparține secretariatului și organelor patronatului."
+      },
+      "s8": {
+        "title": "Securitate",
+        "body": "Aplicăm măsuri tehnice și organizatorice adecvate: transmisie criptată (HTTPS), acces restricționat pe roluri, politici de securitate la nivel de rând în baza de date, documentele sensibile (inclusiv actele de identitate) stocate în spații private, cu acces prin linkuri semnate temporar, pseudonimizarea adreselor IP și back-up regulat."
+      },
+      "s9": {
+        "title": "Minori",
+        "body": "Platforma se adresează organizațiilor și reprezentanților lor adulți. Nu colectăm cu bună știință date ale minorilor prin această platformă."
+      },
+      "s10": {
+        "title": "Actualizări",
+        "body": "Putem actualiza această politică. Modificările semnificative vor fi anunțate în platformă, iar data ultimei actualizări apare în partea de sus."
+      },
+      "s11": {
+        "title": "Contact",
+        "body": "Operator: Patronatul Furnizorilor Privați de Servicii Sociale. Pentru exercitarea oricărui drept sau întrebări privind datele, scrieți la office@pfpss.ro cu mențiunea „GDPR” în subiect, ori sunați la 0732 009 000."
+      }
+    },
+    "terms": {
+      "breadcrumb": {
+        "home": "Acasă",
+        "terms": "Termeni"
+      },
+      "title": "Termeni și condiții",
+      "subtitle": "Regulile de utilizare a site-ului PFPSS și a informațiilor publicate aici.",
+      "lastUpdated": "În vigoare din: 03.08.2026",
+      "editorLabel": "Editor:",
+      "editor": "Patronatul Furnizorilor Privați de Servicii Sociale (PFPSS), CUI 50457026, sediu social: Phoenicia Business Center, Corp A, interfon 14, Str. Turturelelor 11b, bl. A, sc. A, et. 1, ap. a14, Sector 3, București.",
+      "s1": {
+        "title": "Definiții",
+        "body": "• Patronatul / PFPSS — Patronatul Furnizorilor Privați de Servicii Sociale, asociație patronală constituită conform Legii nr. 62/2011 a dialogului social, operatorul platformei.\n• Platforma / site-ul — website-ul pfpss.ro și zona de cont pentru membri.\n• Vizitator — orice persoană care accesează secțiunile publice.\n• Membru — furnizorul privat de servicii sociale, persoană juridică, a cărui cerere de aderare a fost acceptată.\n• Contribuție — contribuția lunară de membru."
+      },
+      "s2": {
+        "title": "Acceptarea termenilor",
+        "body": "Accesarea și utilizarea site-ului implică acceptarea integrală a prezenților termeni, a Politicii de confidențialitate și a Politicii de cookies. Dacă nu sunteți de acord, vă rugăm să nu utilizați platforma. Pentru membri se aplică suplimentar Statutul și hotărârile organelor de conducere ale patronatului."
+      },
+      "s3": {
+        "title": "Eligibilitate și cont",
+        "body": "Zona de membru este destinată furnizorilor privați de servicii sociale, reprezentați de o persoană împuternicită legal. La crearea contului declarați că dețineți dreptul de a reprezenta organizația și că datele furnizate sunt reale, complete și actualizate. Sunteți responsabil pentru păstrarea confidențialității parolei și pentru activitatea desfășurată din contul dumneavoastră. O organizație (identificată prin CUI) poate fi înscrisă o singură dată; un utilizator poate administra mai multe organizații."
+      },
+      "s4": {
+        "title": "Aderare, suspendare, retragere",
+        "body": "Aderare: se completează cererea online, se încarcă documentele solicitate (certificat înregistrare/fiscală, certificat constatator sau extras registru asociații-fundații, act de identitate al reprezentantului, acreditare, licență de funcționare) și se achită prima contribuție. Cererea este verificată de secretariat.\n\nSuspendare: secretariatul poate suspenda accesul când restanța de contribuție depășește trei luni. Restanțele continuă să se cumuleze până la plată.\n\nRetragere / excludere: membrul se poate retrage voluntar oricând, din contul propriu; retragerea este definitivă (o readerare ulterioară necesită o cerere nouă) și nu stinge contribuția restantă datorată până la acea dată. Patronatul poate exclude un membru conform Statutului."
+      },
+      "s5": {
+        "title": "Contribuția și plățile",
+        "body": "Contribuția de membru este de 500 RON/lună. Prima lună se calculează prorata din ziua înscrierii până la finalul lunii. Reînnoirea este scadentă pe 1 ale lunii pentru luna în curs; după această dată, luna neachitată devine restanță. Plata se poate face manual sau prin activarea plății automate recurente (card), procesată securizat de Stripe. Puteți reîncerca plata oricând în cursul lunii. Patronatul emite documentul fiscal al contribuției doar la cerere, conform reglementărilor aplicabile asociațiilor patronale. Sumele achitate cu titlu de contribuție nu se restituie, cu excepția erorilor tehnice de încasare."
+      },
+      "s6": {
+        "title": "Serviciile platformei",
+        "body": "Platforma oferă: cont de membru cu documentele și istoricul de plăți, gestiunea contribuției, semnarea instituțională a petițiilor, directorul de membri, biblioteca de resurse, evenimente și beneficii de la parteneri. Beneficiile (reduceri, oferte) sunt acordate de terți parteneri, în condițiile stabilite de aceștia; PFPSS nu răspunde pentru serviciile/produsele partenerilor."
+      },
+      "s7": {
+        "title": "Petiții",
+        "body": "Petițiile sunt deschise furnizorilor de servicii sociale. Semnarea se face în numele organizației (o singură semnătură confirmată per CUI) și se validează prin confirmare pe email. Prin semnare declarați că reprezentați legal organizația indicată. PFPSS poate înlătura semnăturile evident nereale, iar organizația își poate retrage oricând semnătura."
+      },
+      "s8": {
+        "title": "Conținutul și documentele furnizate de utilizator",
+        "body": "Sunteți responsabil pentru legalitatea, acuratețea și dreptul de a încărca documentele transmise. Ne acordați dreptul limitat de a le stoca și prelucra strict pentru verificarea și administrarea calității de membru, conform Politicii de confidențialitate. Este interzisă încărcarea de conținut ilegal, fals sau care încalcă drepturile terților."
+      },
+      "s9": {
+        "title": "Utilizare interzisă",
+        "body": "Sunt interzise: accesarea neautorizată a conturilor altor utilizatori, testarea vulnerabilităților fără acord, extragerea automată a datelor (scraping), transmiterea de programe dăunătoare, folosirea platformei în scopuri ilegale sau pentru a prejudicia patronatul ori alți membri."
+      },
+      "s10": {
+        "title": "Proprietate intelectuală",
+        "body": "Textele, imaginile, logo-urile și grafica sunt proprietatea PFPSS sau a deținătorilor de drepturi indicați. Reproducerea integrală sau parțială fără acord scris prealabil este interzisă, exceptând citarea cu menționarea sursei."
+      },
+      "s11": {
+        "title": "Disponibilitate și mentenanță",
+        "body": "Depunem eforturi rezonabile pentru funcționarea continuă a platformei, dar nu garantăm disponibilitatea neîntreruptă. Putem efectua mentenanță programată sau întreruperi necesare, pe cât posibil anunțate."
+      },
+      "s12": {
+        "title": "Limitarea răspunderii",
+        "body": "Informațiile publicate au caracter informativ și nu constituie consultanță juridică, fiscală sau medicală. În limitele permise de lege, PFPSS nu răspunde pentru daune indirecte decurgând din utilizarea sau imposibilitatea de a utiliza platforma ori din conținutul site-urilor terțe la care se face trimitere."
+      },
+      "s13": {
+        "title": "Protecția datelor",
+        "body": "Prelucrarea datelor cu caracter personal este descrisă în Politica de confidențialitate, care face parte integrantă din prezenții termeni."
+      },
+      "s14": {
+        "title": "Modificări",
+        "body": "Putem actualiza acești termeni periodic. Modificările semnificative vor fi anunțate în platformă. Versiunea aplicabilă este cea publicată la momentul accesării."
+      },
+      "s15": {
+        "title": "Legea aplicabilă, litigii și ANPC",
+        "body": "Prezenții termeni sunt guvernați de legea română. Eventualele litigii se soluționează amiabil sau, în lipsa unui acord, la instanțele competente din București. Pentru soluționarea alternativă a litigiilor consultați ANPC — SAL și platforma SOL a Comisiei Europene."
+      },
+      "s16": {
+        "title": "Contact",
+        "body": "Patronatul Furnizorilor Privați de Servicii Sociale · office@pfpss.ro · 0732 009 000 · Phoenicia Business Center, Corp A, interfon 14, Str. Turturelelor 11b, bl. A, sc. A, et. 1, ap. a14, Sector 3, București."
+      }
+    },
+    "cookies": {
+      "breadcrumb": {
+        "home": "Acasă",
+        "cookies": "Cookies"
+      },
+      "title": "Politica de cookies",
+      "subtitle": "Folosim cookies pentru funcționarea site-ului și, doar cu acordul dumneavoastră, pentru analiză și marketing.",
+      "lastUpdated": "Ultima actualizare: 14 iulie 2026",
+      "s1": {
+        "title": "Ce folosim, pe scurt",
+        "body": "În prezent site-ul nu folosește cookies de analiză sau de marketing și niciun serviciu de urmărire terț în mod activ, până la acordul dumneavoastră. Folosim spațiul local al browserului (localStorage) pentru funcționarea de bază: memorarea preferinței dvs. de cookies și, dacă vă autentificați, păstrarea sesiunii de cont. Fonturile sunt auto-găzduite prin aplicație, deci afișarea paginii nu trimite date către terți pentru tipografie.\n\nPreferințele sunt gestionate prin Google Consent Mode v2: până la acord, stocările de tip analiză și marketing rămân pe „denied”. Dacă activați analiza și este configurat un instrument de măsurare, acesta se încarcă doar după consimțământ."
+      },
+      "s2": {
+        "title": "Categorii",
+        "body": "Cookie-urile și stocările locale se împart în patru categorii: strict necesare, funcționale, analiză și marketing. Doar cele strict necesare sunt active implicit."
+      },
+      "s3": {
+        "title": "Strict necesare",
+        "body": "Indispensabile pentru funcționare. Nu pot fi dezactivate. Temei: art. 6 lit. f GDPR (interes legitim).\n\n• pfpss.cookie.consent (localStorage) — memorează preferințele dvs. de cookies, ca să nu vă întrebăm la fiecare vizită.\n• sb-…-auth-token (localStorage) — creat doar dacă vă autentificați în cont; păstrează sesiunea. Dispare la delogare.\n• sidebar_state (localStorage) — reține dacă meniul lateral din cont este extins sau restrâns."
+      },
+      "s4": {
+        "title": "Funcționale (opțional)",
+        "body": "Ar permite reținerea unor preferințe de interfață. Activate doar cu consimțământ. În acest moment nu setăm astfel de cookies."
+      },
+      "s5": {
+        "title": "Analiză (opțional)",
+        "body": "Ar oferi statistici agregate despre folosirea site-ului. Activate doar după consimțământ explicit (art. 6 lit. a GDPR). Orice instrument de analiză (de exemplu Google Analytics) se încarcă doar după acordul din banner / Setări cookies."
+      },
+      "s6": {
+        "title": "Marketing (opțional)",
+        "body": "Ar fi folosite pentru campanii și remarketing. În acest moment nu folosim cookies de marketing. Dacă vom introduce vreunul dintre serviciile de mai sus, îl vom încărca doar după consimțământul dvs. și vom actualiza această pagină."
+      },
+      "s7": {
+        "title": "Tehnologii de la terți",
+        "body": "În anumite interacțiuni, servicii terțe pot seta cookies tehnice strict necesare, fără a le folosi pentru profilare pe site-ul nostru:\n\n• Stripe — la activarea plății automate / procesarea cardului, pentru securitate și prevenirea fraudei.\n• Cloudflare Turnstile — pe formularele publice, pentru a distinge vizitatorii reali de roboți (anti-spam), fără urmărire publicitară.\n\nNu încărcăm rețele de publicitate, pixeli de social media sau instrumente de analiză de la terți fără consimțământ."
+      },
+      "s8": {
+        "title": "Durata de păstrare",
+        "body": "Preferința de cookies se păstrează local până la ștergerea datelor site-ului sau revizuirea ei. Sesiunea de autentificare dispare la delogare. Cookies-urile strict tehnice ale terților au duratele stabilite de aceștia."
+      },
+      "s9": {
+        "title": "Cum vă retrageți consimțământul",
+        "body": "Apăsați linkul „Setări cookies” din subsolul (footer-ul) oricărei pagini pentru a redeschide preferințele și a le modifica oricând. Alternativ, puteți gestiona sau șterge cookies-urile din setările browserului (Chrome, Firefox, Safari, Edge — secțiunea Confidențialitate / Cookies) — la următoarea vizită bannerul va reapărea. Blocarea cookies-urilor strict necesare poate afecta funcționarea platformei."
+      },
+      "s10": {
+        "title": "Modificări",
+        "body": "Putem actualiza această politică odată cu introducerea unor tehnologii noi. Data ultimei actualizări apare în partea de sus a paginii."
+      },
+      "s11": {
+        "title": "Contact",
+        "body": "Întrebări despre cookies sau protecția datelor: office@pfpss.ro. Vezi și Politica de confidențialitate."
+      }
+    }
+  },
+  "cookieBanner": {
+    "title": "Control cookies",
+    "description": "Folosim cookies pentru funcționarea site-ului și, doar cu acordul tău, pentru analiză și marketing. Poți alege ce accepți.",
+    "learnMore": "Află mai multe",
+    "acceptAll": "Accept tot",
+    "rejectAll": "Refuz tot",
+    "settings": "Setări",
+    "savePreferences": "Salvează preferințele",
+    "alwaysActive": "Activ mereu",
+    "categories": {
+      "necessary": {
+        "title": "Strict necesare",
+        "desc": "Indispensabile pentru funcționare. Nu pot fi dezactivate."
+      },
+      "functional": {
+        "title": "Funcționale",
+        "desc": "Preferințe de interfață. Opționale."
+      },
+      "analytics": {
+        "title": "Analiză",
+        "desc": "Statistici agregate despre utilizarea site-ului."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "desc": "Campanii și remarketing."
+      }
     }
   }
 }

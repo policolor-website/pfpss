@@ -44,10 +44,14 @@
       "cookies": "Cookies"
     },
     "legal": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "cookies": "Cookies",
+      "cookieSettings": "Cookie settings",
       "name": "Name:",
       "cui": "Tax ID:",
-      "address": "Address:",
-      "addressValue": "Phoenicia Business Center, Corp A, interfon 14, Str. Turturelelor 11b, bl. A, sc. A, et. 1, ap. a14, Sector 3, Bucharest",
+      "address": "Registered office:",
+      "addressValue": "Phoenicia Business Center, Building A, intercom 14, 11b Turturelelor St., bl. A, sc. A, et. 1, ap. a14, Sector 3, Bucharest",
       "disputeResolution": "Dispute resolution:"
     },
     "copyright": "© {year} PFPSS. All rights reserved.",
@@ -1064,6 +1068,219 @@
       "members": "Members",
       "documents": "Documents",
       "petitions": "Petitions"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "breadcrumb": {
+        "home": "Home",
+        "privacy": "Privacy"
+      },
+      "title": "Privacy Policy",
+      "subtitle": "Processing of personal data collected through the pfpss.ro website, in accordance with EU Regulation 2016/679 (GDPR).",
+      "lastUpdated": "Last updated: July 15, 2026",
+      "operatorLabel": "Data controller:",
+      "operator": "Patronatul Furnizorilor Privați de Servicii Sociale (PFPSS), Tax ID 50457026, registered office: Phoenicia Business Center, Building A, intercom 14, 11b Turturelelor St., bl. A, sc. A, et. 1, ap. a14, Sector 3, Bucharest. Contact: office@pfpss.ro, 0732 009 000.",
+      "s1": {
+        "title": "What data we collect",
+        "body": "Membership application: organization data (name, tax ID, registration number, address, county, service type, capacity), legal representative data (name, position, personal identification number), email and phone contact.\n\nUploaded documents: registration/tax certificate, constitutive certificate or association-foundation registry extract, representative's identity document (contains CNP and photo), accreditation, operating license and membership application. They are stored encrypted, with restricted access, and used exclusively for validating membership status.\n\nPetition signing: organization name and tax ID (if applicable), signer's name and position, email, phone, CNP and IP address (stored only as a hash). The CNP is stored exclusively encrypted (AES-256-GCM) plus an irreversible fingerprint (HMAC), not in clear. It is not displayed publicly and is not included in standard exports.\n\nContact form: name, email, subject, message and IP address. Public forms (contact, authentication, registration, petitions) are protected against automated abuse through Cloudflare Turnstile.\n\nStrictly necessary technical data: cookie preferences and, upon authentication, the account session (stored locally in the browser). Analytics tools load only after consent. See Cookie Policy.\n\nThe personal identification number (CNP) of the legal representative is processed upon joining for the purpose of identity verification and preparation of membership documents, under art. 6 para. (1) let. b) GDPR and with the guarantees provided by art. 4 of Law no. 190/2018 (restricted access, designated personnel, limited retention). When signing petitions, the signer's CNP is processed for signature uniqueness and for delivery to authorities in legally justified cases; it is stored only encrypted, on the server. The copy of the identity card (upon joining) may be subject to automated verification (OCR) involving a processor outside the EEA (Google), only if you give explicit consent at upload; otherwise, the document is verified exclusively manually. The CNP is not displayed publicly."
+      },
+      "s2": {
+        "title": "Purpose and legal basis of processing",
+        "body": "• Processing membership applications and inquiries — basis: pre-contractual measures and our legitimate interest in responding to requests (art. 6 let. b and f GDPR).\n• Subsequent communication with members and partners — basis: execution of membership (art. 6 let. b GDPR).\n• Possible site usage statistics — basis: consent given in the cookie banner (art. 6 let. a GDPR)."
+      },
+      "s3": {
+        "title": "Retention period",
+        "body": "Applicants' contact data is kept for a maximum of 24 months from the last interaction.\n\nMembers' data is kept for the duration of membership and 5 years after termination, in accordance with legal obligations."
+      },
+      "s4": {
+        "title": "Recipients and processors",
+        "body": "Data is accessed by PFPSS staff and the following service providers acting as processors, under confidentiality clauses:\n\n• Vercel Inc. — website hosting (global infrastructure, including USA). Transfer outside the EEA based on Standard Contractual Clauses.\n• Supabase — database and document storage, hosted in the European Union (Ireland).\n• Resend — sending transactional emails (confirmations, notifications). Transfer outside the EEA based on Standard Contractual Clauses.\n• Stripe — processing membership fee payments (card). Transfer outside the EEA based on Standard Contractual Clauses.\n• Cloudflare — anti-bot protection (Turnstile) on public forms.\n• ANAF — verification of company data by tax ID, through the public service of the National Agency for Fiscal Administration (independent public operator).\n• Google — automated verification (OCR) of uploaded documents, only with explicit consent for the identity card. Transfer outside the EEA based on Google's guarantees.\n\nWe do not sell or rent your data to third parties."
+      },
+      "s5": {
+        "title": "Your rights",
+        "body": "Under GDPR you have the right to:\n• access personal data;\n• rectification or erasure;\n• restriction of processing;\n• data portability;\n• objection to processing;\n• withdrawal of consent at any time;\n• complaint to the National Supervisory Authority for Personal Data Processing (dataprotection.ro).\n\nYou can exercise your rights directly from the platform, in Account Settings → My Rights (GDPR) (export or deletion request), or by email. We respond within 30 days, according to art. 12 GDPR, after identity verification."
+      },
+      "s6": {
+        "title": "Transfers outside the EEA",
+        "body": "Some providers (Vercel, Resend, Stripe, Google) may process data outside the European Economic Area. These transfers are made based on the European Commission's Standard Contractual Clauses or other adequate guarantees provided by art. 44–49 GDPR."
+      },
+      "s7": {
+        "title": "Automated document verification",
+        "body": "To help quickly validate membership documents, some documents may be analyzed automatically (OCR) with the help of an external processor. The identity card (which contains the CNP) is subject to automated analysis only with your explicit consent; otherwise it is verified exclusively manually. We do not make decisions with legal effects based solely on automated processing — the membership decision belongs to the secretariat and the patronat's governing bodies."
+      },
+      "s8": {
+        "title": "Security",
+        "body": "We apply appropriate technical and organizational measures: encrypted transmission (HTTPS), role-based restricted access, row-level security policies in the database, sensitive documents (including identity documents) stored in private spaces, with access through temporarily signed links, IP address pseudonymization and regular backups."
+      },
+      "s9": {
+        "title": "Minors",
+        "body": "The platform is intended for organizations and their adult representatives. We do not knowingly collect data from minors through this platform."
+      },
+      "s10": {
+        "title": "Updates",
+        "body": "We may update this policy. Significant changes will be announced in the platform, and the last updated date appears at the top."
+      },
+      "s11": {
+        "title": "Contact",
+        "body": "Controller: Patronatul Furnizorilor Privați de Servicii Sociale. To exercise any right or for data-related questions, write to office@pfpss.ro with \"GDPR\" in the subject, or call 0732 009 000."
+      }
+    },
+    "terms": {
+      "breadcrumb": {
+        "home": "Home",
+        "terms": "Terms"
+      },
+      "title": "Terms and conditions",
+      "subtitle": "The rules for using the PFPSS website and the information published here.",
+      "lastUpdated": "In effect from: 03.08.2026",
+      "editorLabel": "Editor:",
+      "editor": "Patronatul Furnizorilor Privați de Servicii Sociale (PFPSS), Tax ID 50457026, registered office: Phoenicia Business Center, Building A, intercom 14, 11b Turturelelor St., bl. A, sc. A, et. 1, ap. a14, Sector 3, Bucharest.",
+      "s1": {
+        "title": "Definitions",
+        "body": "• Patronatul / PFPSS — Patronatul Furnizorilor Privați de Servicii Sociale, employers' association constituted under Law no. 62/2011 on social dialogue, the platform operator.\n• Platform / website — the pfpss.ro website and the member account area.\n• Visitor — any person accessing the public sections.\n• Member — the private social service provider, legal entity, whose membership application has been accepted.\n• Contribution — the monthly membership fee."
+      },
+      "s2": {
+        "title": "Acceptance of terms",
+        "body": "Accessing and using the website implies full acceptance of these terms, the Privacy Policy and the Cookie Policy. If you do not agree, please do not use the platform. For members, the Statute and decisions of the patronat's governing bodies additionally apply."
+      },
+      "s3": {
+        "title": "Eligibility and account",
+        "body": "The member area is intended for private social service providers, represented by a legally authorized person. By creating an account you declare that you have the right to represent the organization and that the data provided is real, complete and up to date. You are responsible for keeping your password confidential and for the activity carried out from your account. An organization (identified by tax ID) can be registered only once; a user can manage multiple organizations."
+      },
+      "s4": {
+        "title": "Joining, suspension, withdrawal",
+        "body": "Joining: the online application is completed, the requested documents are uploaded (registration/tax certificate, constitutive certificate or association-foundation registry extract, representative's identity document, accreditation, operating license) and the first contribution is paid. The application is verified by the secretariat.\n\nSuspension: the secretariat may suspend access when the contribution arrears exceed three months. Arrears continue to accumulate until payment.\n\nWithdrawal / exclusion: the member can withdraw voluntarily at any time, from their own account; withdrawal is final (a subsequent re-registration requires a new application) and does not extinguish the contribution arrears owed up to that date. The patronat may exclude a member according to the Statute."
+      },
+      "s5": {
+        "title": "Contribution and payments",
+        "body": "The membership fee is 500 RON/month. The first month is calculated pro-rata from the day of registration to the end of the month. Renewal is due on the 1st of the month for the current month; after this date, the unpaid month becomes arrears. Payment can be made manually or by activating automatic recurring payment (card), processed securely by Stripe. You can retry payment at any time during the month. The patronat issues the fiscal document for the contribution only on request, in accordance with the regulations applicable to employers' associations. Amounts paid as contributions are not refundable, except for technical collection errors."
+      },
+      "s6": {
+        "title": "Platform services",
+        "body": "The platform offers: member account with documents and payment history, contribution management, institutional signing of petitions, member directory, resource library, events and partner benefits. Benefits (discounts, offers) are granted by third-party partners, under their conditions; PFPSS is not responsible for the partners' services/products."
+      },
+      "s7": {
+        "title": "Petitions",
+        "body": "Petitions are open to social service providers. Signing is done on behalf of the organization (one confirmed signature per tax ID) and is validated by email confirmation. By signing you declare that you legally represent the indicated organization. PFPSS may remove obviously false signatures, and the organization may withdraw its signature at any time."
+      },
+      "s8": {
+        "title": "User-provided content and documents",
+        "body": "You are responsible for the legality, accuracy and right to upload the documents submitted. You grant us the limited right to store and process them strictly for verifying and managing membership status, in accordance with the Privacy Policy. Uploading illegal, false content or content that infringes third-party rights is prohibited."
+      },
+      "s9": {
+        "title": "Prohibited use",
+        "body": "Prohibited: unauthorized access to other users' accounts, testing vulnerabilities without agreement, automated data extraction (scraping), transmitting malicious programs, using the platform for illegal purposes or to harm the patronat or other members."
+      },
+      "s10": {
+        "title": "Intellectual property",
+        "body": "Texts, images, logos and graphics are the property of PFPSS or the indicated rights holders. Full or partial reproduction without prior written agreement is prohibited, except for citation with source acknowledgment."
+      },
+      "s11": {
+        "title": "Availability and maintenance",
+        "body": "We make reasonable efforts for the continuous operation of the platform, but do not guarantee uninterrupted availability. We may perform scheduled maintenance or necessary interruptions, announced where possible."
+      },
+      "s12": {
+        "title": "Limitation of liability",
+        "body": "The published information is informative and does not constitute legal, tax or medical advice. To the extent permitted by law, PFPSS is not liable for indirect damages arising from the use or inability to use the platform or from the content of third-party websites to which reference is made."
+      },
+      "s13": {
+        "title": "Data protection",
+        "body": "The processing of personal data is described in the Privacy Policy, which is an integral part of these terms."
+      },
+      "s14": {
+        "title": "Modifications",
+        "body": "We may update these terms periodically. Significant changes will be announced in the platform. The applicable version is the one published at the time of access."
+      },
+      "s15": {
+        "title": "Applicable law, disputes and ANPC",
+        "body": "These terms are governed by Romanian law. Any disputes are resolved amicably or, failing agreement, before the competent courts in Bucharest. For alternative dispute resolution consult ANPC — SAL and the European Commission's SOL platform."
+      },
+      "s16": {
+        "title": "Contact",
+        "body": "Patronatul Furnizorilor Privați de Servicii Sociale · office@pfpss.ro · 0732 009 000 · Phoenicia Business Center, Building A, intercom 14, 11b Turturelelor St., bl. A, sc. A, et. 1, ap. a14, Sector 3, Bucharest."
+      }
+    },
+    "cookies": {
+      "breadcrumb": {
+        "home": "Home",
+        "cookies": "Cookies"
+      },
+      "title": "Cookie Policy",
+      "subtitle": "We use cookies for the operation of the site and, only with your consent, for analytics and marketing.",
+      "lastUpdated": "Last updated: July 14, 2026",
+      "s1": {
+        "title": "What we use, in short",
+        "body": "Currently the site does not use analytics or marketing cookies and no third-party tracking service actively, until your consent. We use the browser's local storage (localStorage) for basic operation: storing your cookie preferences and, if you authenticate, keeping the account session. Fonts are self-hosted through the application, so displaying the page does not send data to third parties for typography.\n\nPreferences are managed through Google Consent Mode v2: until consent, analytics and marketing storage remains \"denied\". If you enable analytics and a measurement tool is configured, it loads only after consent."
+      },
+      "s2": {
+        "title": "Categories",
+        "body": "Cookies and local storage are divided into four categories: strictly necessary, functional, analytics and marketing. Only strictly necessary ones are active by default."
+      },
+      "s3": {
+        "title": "Strictly necessary",
+        "body": "Essential for operation. Cannot be disabled. Basis: art. 6 let. f GDPR (legitimate interest).\n\n• pfpss.cookie.consent (localStorage) — stores your cookie preferences so we don't ask you at every visit.\n• sb-…-auth-token (localStorage) — created only if you log into your account; keeps the session. Disappears on logout.\n• sidebar_state (localStorage) — remembers whether the account sidebar is expanded or collapsed."
+      },
+      "s4": {
+        "title": "Functional (optional)",
+        "body": "Would allow retaining interface preferences. Activated only with consent. At this time we do not set such cookies."
+      },
+      "s5": {
+        "title": "Analytics (optional)",
+        "body": "Would provide aggregate statistics about site usage. Activated only after explicit consent (art. 6 let. a GDPR). Any analytics tool (e.g. Google Analytics) loads only after consent from the banner / Cookie Settings."
+      },
+      "s6": {
+        "title": "Marketing (optional)",
+        "body": "Would be used for campaigns and remarketing. At this time we do not use marketing cookies. If we introduce any of the above services, we will load it only after your consent and will update this page."
+      },
+      "s7": {
+        "title": "Third-party technologies",
+        "body": "In certain interactions, third-party services may set strictly necessary technical cookies, without using them for profiling on our site:\n\n• Stripe — when activating automatic payment / card processing, for security and fraud prevention.\n• Cloudflare Turnstile — on public forms, to distinguish real visitors from bots (anti-spam), without advertising tracking.\n\nWe do not load advertising networks, social media pixels or third-party analytics tools without consent."
+      },
+      "s8": {
+        "title": "Retention period",
+        "body": "The cookie preference is stored locally until the site data is deleted or revised. The authentication session disappears on logout. Third-party strictly technical cookies have the durations set by them."
+      },
+      "s9": {
+        "title": "How to withdraw consent",
+        "body": "Click the \"Cookie settings\" link in the footer of any page to reopen preferences and change them at any time. Alternatively, you can manage or delete cookies from your browser settings (Chrome, Firefox, Safari, Edge — Privacy / Cookies section) — on the next visit the banner will reappear. Blocking strictly necessary cookies may affect platform functionality."
+      },
+      "s10": {
+        "title": "Modifications",
+        "body": "We may update this policy as new technologies are introduced. The last updated date appears at the top of the page."
+      },
+      "s11": {
+        "title": "Contact",
+        "body": "Questions about cookies or data protection: office@pfpss.ro. See also the Privacy Policy."
+      }
+    }
+  },
+  "cookieBanner": {
+    "title": "Cookie control",
+    "description": "We use cookies for site operation and, only with your consent, for analytics and marketing. You can choose what to accept.",
+    "learnMore": "Learn more",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject all",
+    "settings": "Settings",
+    "savePreferences": "Save preferences",
+    "alwaysActive": "Always active",
+    "categories": {
+      "necessary": {
+        "title": "Strictly necessary",
+        "desc": "Essential for operation. Cannot be disabled."
+      },
+      "functional": {
+        "title": "Functional",
+        "desc": "Interface preferences. Optional."
+      },
+      "analytics": {
+        "title": "Analytics",
+        "desc": "Aggregate statistics about site usage."
+      },
+      "marketing": {
+        "title": "Marketing",
+        "desc": "Campaigns and remarketing."
+      }
     }
   }
 }

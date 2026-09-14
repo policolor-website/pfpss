@@ -1,10 +1,14 @@
+"use client";
+
 import { Phone, Mail, MapPin } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
 
 export function SiteFooter() {
   const t = useTranslations("footer");
+  const locale = useLocale();
+  const prefix = locale === "en" ? "/en" : "";
 
   const navLinks = [
     { href: "/despre", label: t("nav.aboutUs") },
@@ -152,7 +156,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="pt-6 border-t border-navy-deep/10 text-center">
+        <div className="pt-6 border-t border-navy-deep/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <span className="text-xs text-navy-deep/50">
             {t("copyright", { year: new Date().getFullYear() })}{" "}
             ·{" "}
@@ -166,6 +170,32 @@ export function SiteFooter() {
               FORSITE.RO
             </a>
           </span>
+          <div className="flex items-center gap-4 text-xs">
+            <Link
+              href={`${prefix}/confidentialitate`}
+              className="text-navy-deep/50 hover:text-navy-deep transition-colors"
+            >
+              {t("legal.privacy")}
+            </Link>
+            <Link
+              href={`${prefix}/termeni`}
+              className="text-navy-deep/50 hover:text-navy-deep transition-colors"
+            >
+              {t("legal.terms")}
+            </Link>
+            <Link
+              href={`${prefix}/cookies`}
+              className="text-navy-deep/50 hover:text-navy-deep transition-colors"
+            >
+              {t("legal.cookies")}
+            </Link>
+            <button
+              onClick={() => window.dispatchEvent(new Event("open-cookie-settings"))}
+              className="text-navy-deep/50 hover:text-navy-deep transition-colors"
+            >
+              {t("legal.cookieSettings")}
+            </button>
+          </div>
         </div>
       </div>
     </footer>

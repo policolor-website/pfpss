@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -43,6 +43,24 @@ export default function InscrierePage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [step, setStep] = useState(1);
+
+  // Redirect logged-in users to dashboard
+  useEffect(() => {
+    async function checkSession() {
+      const supabase = createClient();
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        const { data: profile } = await supabase
+          .from("profiles")
+          .select("role")
+          .eq("id", session.user.id)
+          .single();
+        const prefix = locale === "en" ? "/en" : "";
+        router.push(`${prefix}/${profile?.role === "admin" ? "admin" : "dashboard"}`);
+      }
+    }
+    checkSession();
+  }, [router, locale]);
 
   // Cont
   const [email, setEmail] = useState("");
