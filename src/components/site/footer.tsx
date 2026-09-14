@@ -154,7 +154,17 @@ export function SiteFooter() {
 
         <div className="pt-6 border-t border-navy-deep/10 text-center">
           <span className="text-xs text-navy-deep/50">
-            {t("copyright", { year: new Date().getFullYear() })}
+            {t("copyright", { year: new Date().getFullYear() })}{" "}
+            ·{" "}
+            {t("createdBy")}{" "}
+            <a
+              href="https://forsite.ro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-navy-deep hover:text-gold transition-colors"
+            >
+              FORSITE.RO
+            </a>
           </span>
         </div>
       </div>

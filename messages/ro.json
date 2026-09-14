@@ -50,7 +50,8 @@
       "addressValue": "Phoenicia Business Center, Corp A, interfon 14, Str. Turturelelor 11b, bl. A, sc. A, et. 1, ap. a14, Sector 3, București",
       "disputeResolution": "Soluționarea litigiilor:"
     },
-    "copyright": "© {year} PFPSS. Toate drepturile rezervate."
+    "copyright": "© {year} PFPSS. Toate drepturile rezervate.",
+    "createdBy": "Creat de"
   },
   "home": {
     "badge": "Patronatul Furnizorilor Privați de Servicii Sociale din România",
