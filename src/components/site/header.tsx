@@ -1,24 +1,59 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Globe, ChevronDown } from "lucide-react";
+import { Menu, X, Globe, ChevronDown, User, LayoutDashboard, LogOut, ShieldCheck } from "lucide-react";
 import { useTranslations, useLocale } from "next-intl";
 import Image from "next/image";
+import { createClient } from "@/lib/supabase/client";
 
 export function SiteHeader() {
   const t = useTranslations("header");
   const locale = useLocale();
+  const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [userMenuOpen, setUserMenuOpen] = useState(false);
+  const [user, setUser] = useState<{ email: string; full_name: string | null } | null>(null);
+  const [userRole, setUserRole] = useState<string | null>(null);
   const pathname = usePathname();
 
   // Strip locale prefix from pathname to get the base path
   const basePath = pathname.replace(/^\/(en|ro)(?=\/|$)/, "") || "/";
 
   const prefix = locale === "en" ? "/en" : "";
+
+  // Check auth state
+  useEffect(() => {
+    async function checkAuth() {
+      const supabase = createClient();
+      const { data: { session } } = await supabase.auth.getSession();
+      if (!session) return;
+      const { data: profile } = await supabase
+        .from("profiles")
+        .select("full_name, role")
+        .eq("id", session.user.id)
+        .single();
+      setUser({ email: session.user.email || "", full_name: profile?.full_name || null });
+      setUserRole(profile?.role || null);
+    }
+    checkAuth();
+  }, [pathname]);
+
+  async function handleLogout() {
+    const supabase = createClient();
+    await supabase.auth.signOut();
+    setUser(null);
+    setUserRole(null);
+    setUserMenuOpen(false);
+    setMobileOpen(false);
+    router.push(`${prefix}/login`);
+    router.refresh();
+  }
+
+  const dashboardHref = userRole === "admin" ? `${prefix}/admin` : `${prefix}/dashboard`;
 
   // Build locale switcher links preserving current path
   const switchToLocale = (targetLocale: string) => {
@@ -108,21 +143,72 @@ export function SiteHeader() {
               </AnimatePresence>
             </div>
 
-            {/* Login button */}
-            <Link
-              href={`${prefix}/login`}
-              className="hidden sm:inline-flex items-center text-sm font-semibold text-navy-deep hover:text-gold transition-colors"
-            >
-              {t("actions.loginMembers")}
-            </Link>
+            {/* Auth actions */}
+            {user ? (
+              <div className="relative hidden sm:block">
+                <button
+                  onClick={() => setUserMenuOpen(!userMenuOpen)}
+                  className="flex items-center gap-2 text-sm font-medium text-navy-deep hover:text-gold transition-colors"
+                >
+                  <div className="size-8 rounded-full bg-navy-deep/10 flex items-center justify-center">
+                    <User className="size-4 text-navy-deep" />
+                  </div>
+                  <span className="max-w-32 truncate">
+                    {user.full_name || user.email}
+                  </span>
+                  <ChevronDown className="size-3" />
+                </button>
+                <AnimatePresence>
+                  {userMenuOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0.15 }}
+                      className="absolute right-0 mt-2 w-56 rounded-md border border-navy-deep/10 bg-white shadow-lg py-1"
+                    >
+                      <div className="px-4 py-2 border-b border-navy-deep/5">
+                        <p className="text-xs text-navy-deep/40">{t("actions.signedInAs")}</p>
+                        <p className="text-sm font-medium text-navy-deep truncate">{user.email}</p>
+                      </div>
+                      <Link
+                        href={dashboardHref}
+                        className="flex items-center gap-2 px-4 py-2 text-sm text-navy-deep hover:bg-paper transition-colors"
+                        onClick={() => setUserMenuOpen(false)}
+                      >
+                        {userRole === "admin" ? <ShieldCheck className="size-4" /> : <LayoutDashboard className="size-4" />}
+                        {userRole === "admin" ? t("actions.adminPanel") : t("actions.dashboard")}
+                      </Link>
+                      <button
+                        onClick={handleLogout}
+                        className="w-full flex items-center gap-2 px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors"
+                      >
+                        <LogOut className="size-4" />
+                        {t("actions.logout")}
+                      </button>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ) : (
+              <>
+                {/* Login button */}
+                <Link
+                  href={`${prefix}/login`}
+                  className="hidden sm:inline-flex items-center text-sm font-semibold text-navy-deep hover:text-gold transition-colors"
+                >
+                  {t("actions.loginMembers")}
+                </Link>
 
-            {/* Signup button */}
-            <Link
-              href={`${prefix}/inscriere`}
-              className="hidden sm:inline-flex items-center bg-navy-deep text-paper px-5 py-2 rounded-sm text-sm font-semibold hover:bg-navy-light transition-colors"
-            >
-              {t("actions.becomeMember")}
-            </Link>
+                {/* Signup button */}
+                <Link
+                  href={`${prefix}/inscriere`}
+                  className="hidden sm:inline-flex items-center bg-navy-deep text-paper px-5 py-2 rounded-sm text-sm font-semibold hover:bg-navy-light transition-colors"
+                >
+                  {t("actions.becomeMember")}
+                </Link>
+              </>
+            )}
 
             {/* Mobile menu button */}
             <button
@@ -157,20 +243,53 @@ export function SiteHeader() {
                   {link.label}
                 </Link>
               ))}
-              <Link
-                href={`${prefix}/login`}
-                className="py-3 text-sm font-semibold text-navy-deep hover:text-gold transition-colors"
-                onClick={() => setMobileOpen(false)}
-              >
-                {t("actions.loginMembers")}
-              </Link>
-              <Link
-                href={`${prefix}/inscriere`}
-                className="py-3 mt-2 inline-flex items-center justify-center bg-navy-deep text-paper px-5 py-2.5 rounded-sm text-sm font-semibold"
-                onClick={() => setMobileOpen(false)}
-              >
-                {t("actions.becomeMember")}
-              </Link>
+              {user ? (
+                <>
+                  <div className="py-3 px-1 flex items-center gap-3 border-b border-navy-deep/5">
+                    <div className="size-9 rounded-full bg-navy-deep/10 flex items-center justify-center shrink-0">
+                      <User className="size-4 text-navy-deep" />
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-sm font-medium text-navy-deep truncate">
+                        {user.full_name || user.email}
+                      </p>
+                      <p className="text-xs text-navy-deep/40 truncate">{user.email}</p>
+                    </div>
+                  </div>
+                  <Link
+                    href={dashboardHref}
+                    className="py-3 text-sm font-semibold text-navy-deep hover:text-gold transition-colors flex items-center gap-2"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {userRole === "admin" ? <ShieldCheck className="size-4" /> : <LayoutDashboard className="size-4" />}
+                    {userRole === "admin" ? t("actions.adminPanel") : t("actions.dashboard")}
+                  </Link>
+                  <button
+                    onClick={handleLogout}
+                    className="py-3 text-sm font-semibold text-red-600 hover:text-red-700 transition-colors flex items-center gap-2 w-full text-left"
+                  >
+                    <LogOut className="size-4" />
+                    {t("actions.logout")}
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link
+                    href={`${prefix}/login`}
+                    className="py-3 text-sm font-semibold text-navy-deep hover:text-gold transition-colors"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {t("actions.loginMembers")}
+                  </Link>
+                  <Link
+                    href={`${prefix}/inscriere`}
+                    className="py-3 mt-2 inline-flex items-center justify-center bg-navy-deep text-paper px-5 py-2.5 rounded-sm text-sm font-semibold"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {t("actions.becomeMember")}
+                  </Link>
+                </>
+              )}
 
               {/* Language switcher (mobile) */}
               <div className="flex items-center gap-2 pt-4 mt-2 border-t border-navy-deep/10">

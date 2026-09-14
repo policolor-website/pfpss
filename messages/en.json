@@ -14,7 +14,11 @@
     "actions": {
       "loginMembers": "Member login",
       "becomeMember": "Become a member",
-      "menu": "Menu"
+      "menu": "Menu",
+      "signedInAs": "Signed in as",
+      "dashboard": "Dashboard",
+      "adminPanel": "Admin panel",
+      "logout": "Log out"
     },
     "lang": {
       "romanian": "Română",
@@ -320,7 +324,13 @@
           "title": "Removal of ISU authorization from the mandatory documents for licensing residential social services",
           "description": "Petition of residential social service operators in Romania — homes for the elderly and centres for adults with disabilities — to amend art. 12 para. (2) let. k) of Law no. 197/2012."
         }
-      }
+      },
+      "pendingApproval": "Organization pending",
+      "pendingApprovalDesc": "Your organization has not been approved yet by the administrator. You will be able to sign petitions after approval.",
+      "confirmTitle": "Confirm signature",
+      "confirmDesc": "You are signing this petition on behalf of your organization. This action cannot be undone after confirmation.",
+      "confirmCancel": "Cancel",
+      "confirmSign": "Yes, sign"
     },
     "adminPanel": "Admin panel"
   },

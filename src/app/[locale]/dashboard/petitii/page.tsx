@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { PenSquare, CheckCircle2, Loader2 } from "lucide-react";
+import { PenSquare, CheckCircle2, Loader2, Clock, AlertTriangle, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations, useLocale } from "next-intl";
 import { createClient } from "@/lib/supabase/client";
 import { toast } from "sonner";
@@ -30,6 +31,8 @@ export default function PetitiiPage() {
   const [loading, setLoading] = useState(true);
   const [signing, setSigning] = useState<string | null>(null);
   const [orgId, setOrgId] = useState("");
+  const [orgStatus, setOrgStatus] = useState<string>("");
+  const [confirmSlug, setConfirmSlug] = useState<string | null>(null);
 
   useEffect(() => {
     async function load() {
@@ -39,10 +42,13 @@ export default function PetitiiPage() {
 
       const { data: org } = await supabase
         .from("organizations")
-        .select("id")
+        .select("id, status")
         .eq("user_id", user.id)
         .single();
-      if (org) setOrgId(org.id);
+      if (org) {
+        setOrgId(org.id);
+        setOrgStatus(org.status);
+      }
 
       const { data } = await supabase
         .from("petitions_signatures")
@@ -56,6 +62,7 @@ export default function PetitiiPage() {
 
   async function handleSign(slug: string) {
     setSigning(slug);
+    setConfirmSlug(null);
     const supabase = createClient();
     const { error } = await supabase
       .from("petitions_signatures")
@@ -100,6 +107,20 @@ export default function PetitiiPage() {
         <p className="text-sm text-navy-deep/40 py-12 text-center">
           {t("noPetitions")}
         </p>
+      ) : orgStatus !== "approved" ? (
+        <div className="p-6 rounded-xl bg-amber-50 border border-amber-200 flex items-start gap-4">
+          <div className="size-10 rounded-lg bg-amber-100 flex items-center justify-center shrink-0">
+            <Clock className="size-5 text-amber-600" />
+          </div>
+          <div>
+            <h3 className="font-heading text-base font-semibold text-amber-800 mb-1">
+              {t("pendingApproval")}
+            </h3>
+            <p className="text-sm text-amber-700 leading-relaxed">
+              {t("pendingApprovalDesc")}
+            </p>
+          </div>
+        </div>
       ) : (
         <div className="space-y-4">
           {petitions.map((p) => {
@@ -122,7 +143,7 @@ export default function PetitiiPage() {
                   </div>
                 ) : (
                   <button
-                    onClick={() => handleSign(p.slug)}
+                    onClick={() => setConfirmSlug(p.slug)}
                     disabled={signing === p.slug}
                     className="inline-flex items-center gap-2 bg-navy-deep text-paper px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-navy-light transition-colors disabled:opacity-50"
                   >
@@ -139,6 +160,78 @@ export default function PetitiiPage() {
           })}
         </div>
       )}
+
+      {/* Confirm modal */}
+      <AnimatePresence>
+        {confirmSlug && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-navy-deep/50 backdrop-blur-sm"
+            onClick={() => setConfirmSlug(null)}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              transition={{ duration: 0.2 }}
+              className="w-full max-w-md rounded-2xl bg-white shadow-2xl overflow-hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="p-6">
+                <div className="flex items-start gap-4 mb-5">
+                  <div className="size-12 rounded-lg bg-amber-50 flex items-center justify-center shrink-0">
+                    <AlertTriangle className="size-6 text-amber-600" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="font-heading text-lg font-bold text-navy-deep mb-1">
+                      {t("confirmTitle")}
+                    </h3>
+                    <p className="text-sm text-navy-deep/60 leading-relaxed">
+                      {t("confirmDesc")}
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => setConfirmSlug(null)}
+                    className="text-navy-deep/30 hover:text-navy-deep transition-colors"
+                  >
+                    <X className="size-5" />
+                  </button>
+                </div>
+
+                <div className="p-4 rounded-lg bg-paper border border-navy-deep/10 mb-5">
+                  <p className="text-sm font-medium text-navy-deep">
+                    {t("petitions.0.title")}
+                  </p>
+                </div>
+
+                <div className="flex gap-3">
+                  <button
+                    onClick={() => setConfirmSlug(null)}
+                    className="flex-1 inline-flex items-center justify-center gap-2 bg-white text-navy-deep border border-navy-deep/15 px-5 py-3 rounded-lg font-semibold text-sm hover:bg-paper transition-colors"
+                  >
+                    {t("confirmCancel")}
+                  </button>
+                  <button
+                    onClick={() => handleSign(confirmSlug)}
+                    disabled={signing === confirmSlug}
+                    className="flex-1 inline-flex items-center justify-center gap-2 bg-navy-deep text-paper px-5 py-3 rounded-lg font-semibold text-sm hover:bg-navy-light transition-colors disabled:opacity-50"
+                  >
+                    {signing === confirmSlug ? (
+                      <Loader2 className="size-4 animate-spin" />
+                    ) : (
+                      <PenSquare className="size-4" />
+                    )}
+                    {t("confirmSign")}
+                  </button>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

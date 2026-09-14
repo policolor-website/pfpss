@@ -14,7 +14,11 @@
     "actions": {
       "loginMembers": "Login membri",
       "becomeMember": "Devino membru",
-      "menu": "Meniu"
+      "menu": "Meniu",
+      "signedInAs": "Conectat ca",
+      "dashboard": "Dashboard",
+      "adminPanel": "Panou admin",
+      "logout": "Deconectare"
     },
     "lang": {
       "romanian": "Română",
@@ -320,7 +324,13 @@
           "title": "Eliminarea autorizației ISU dintre documentele obligatorii pentru licențierea serviciilor sociale rezidențiale",
           "description": "Petiția operatorilor de servicii sociale rezidențiale din România — cămine pentru persoane vârstnice și centre pentru persoane adulte cu dizabilități — pentru modificarea art. 12 alin. (2) lit. k) din Legea nr. 197/2012."
         }
-      }
+      },
+      "pendingApproval": "Organizație în așteptare",
+      "pendingApprovalDesc": "Organizația ta nu a fost încă aprobată de administrator. După aprobare vei putea semna petiții.",
+      "confirmTitle": "Confirmă semnarea",
+      "confirmDesc": "Semnezi această petiție în numele organizației tale. Acțiunea nu poate fi anulată după confirmare.",
+      "confirmCancel": "Anulează",
+      "confirmSign": "Da, semnez"
     },
     "adminPanel": "Panou admin"
   },
